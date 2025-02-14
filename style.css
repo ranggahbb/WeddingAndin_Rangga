@@ -1,0 +1,711 @@
+:root {
+    --text-color: #7d5438;
+    --text-huruf-sambung: #4d2b24;
+    --black: #0a0a0a;
+    --shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* scroll-behavior: smooth; */
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Lora', sans-serif;
+    min-height: 4000px;
+}
+
+.container {
+    max-width: 471px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.huruf-sambung {
+    font-family: 'SymphonyPro-Regular', cursive;
+    color: var(--text-huruf-sambung);
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/img/COVER.svg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.hero .flower1 {
+    position: absolute;
+    width: 100%;
+    right: 95px;
+    top: 20px;
+}
+
+.hero .flower1 img {
+    width: 250px;
+    height: 350px;
+}
+
+.hero .flower2 {
+    position: absolute;
+    width: 100%;
+    left: 118px;
+    top: 400px;
+    z-index: 10;
+    animation: myFlower linear 10s infinite;
+}
+.hero .flower2 img {
+    width: 250px;
+    height: 300px;
+}
+
+.hero .flower3 {
+    position: absolute;
+    width: 100%;
+    left: 178px;
+    top: 290px;
+    z-index: 1;
+    animation: myFlower linear 10s infinite;
+}
+
+.hero .flower3 img {
+    width: 150px;
+    height: 200px;
+}
+
+.hero .dekorasi {
+    position: absolute;
+    width: 100%;
+    top: 310px;
+    right: 60px;
+}
+
+.hero .dekorasi2 {
+    position: absolute;
+    width: 100%;
+    top: 310px;
+    right: -64px;
+}
+
+.hero .dekorasi img,
+.hero .dekorasi2 img {
+    width: 150px;
+    height: 50px;
+}
+
+.hero .dekorasi2 img {
+    transform: rotateY(180deg);
+}
+
+.hero h4 {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    padding-top: 180px;
+    margin-bottom: 60px;
+    z-index: 1;
+    font-weight: 300;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    line-height: 50px;
+    z-index: 1;
+}
+
+.hero h5 {
+    color: var(--text-color);
+    font-size: 1.3rem;
+    margin: 30px 0 5px;
+    line-height: 25px;
+    z-index: 1;
+}
+
+.hero .btn {
+    position: relative;
+    background: var(--text-huruf-sambung);
+    border: none;
+    box-shadow: var(--shadow);
+    font-size: 1rem;
+    margin-top: 20px;
+    height: 100%;
+    z-index: 100;
+    color: white;
+    font-weight: 400;
+    transition: .5s;
+}
+
+.hero .btn:hover {
+    background: #e4e0d3;
+    color: var(--text-color); 
+}
+
+
+
+
+/* navbar */
+
+/* quote css */
+
+.quote {
+    position: relative;
+    display: block;
+    background-image: url(assets/img/QUOTE.svg);
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    overflow: hidden
+}
+
+.quote p {
+    margin-top: 280px;
+    color: var(--text-color);
+    text-wrap: wrap;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.quote h4 {
+    color: var(--text-color);
+    font-size: 1.6rem;
+    font-weight: 800;
+    /* text-shadow: var(--shadow); */
+}
+
+.quote .logo,
+.acara .logo {
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin-top: 140px;
+}
+
+.quote .logo img,
+.acara .logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.quote .quote-flower1 {
+    position: absolute;
+    width: 100%;
+    right: 150px;
+    top: -50px;
+}
+
+.quote .quote-flower1 img {
+    width: 400px;
+    height: 400px;
+}
+
+.quote .quote-flower2 {
+    position: absolute;
+    width: 100%;
+    right: 185px;
+    bottom: -60px;
+}
+
+.quote .quote-flower2 img {
+    width: 250px;
+    height: 250px;
+}
+
+.quote .quote-flower3 {
+    position: absolute;
+    width: 100%;
+    left: 150px;
+    bottom: -40px;
+}
+
+.quote .quote-flower3 img {
+    width: 300px;
+    height: 300px;
+}
+
+.quote .quote-flower4 {
+    position: absolute;
+    width: 100%;
+    left: 150px;
+    top: 50px;
+}
+
+.quote .quote-flower4 img {
+    width: 150px;
+    height: 250px;
+}
+
+.quote .footer-section,
+.opening .footer-section,
+.acara .footer-section,
+.lokasi .footer-section {
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 100px;
+    z-index: -1;
+}
+
+.quote .footer-section img,
+.opening .footer-section img,
+.acara .footer-section img,
+.lokasi .footer-section img{
+    width: 200px;
+    height: 100px;
+}
+
+/* opening css */
+
+.opening {
+    position: relative;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/img/COVER.svg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.opening h3 {
+    display: block;
+    padding-top: 170px;
+    font-size: 2.7rem;
+    color: var(--text-color);  
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.opening h4 {
+    display: block;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 25px;
+    /* text-shadow: var(--shadow); */
+}
+
+.opening p {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.opening h1 {
+    font-size: 4rem;
+}
+
+.opening h5 {
+    font-size: 2.3rem;
+}
+
+.opening .opening-flower1 {
+    position: absolute;
+    width: 100%;
+    right: 150px;
+    top: -50px;
+    z-index: -1;
+}
+
+.opening .opening-flower1 img {
+    width: 400px;
+    height: 400px;
+}
+
+.opening .opening-flower2 {
+    position: absolute;
+    width: 100%;
+    right: 185px;
+    bottom: -60px;
+}
+
+.opening .opening-flower2 img {
+    width: 250px;
+    height: 250px;
+}
+
+.opening .opening-flower3 {
+    position: absolute;
+    width: 100%;
+    left: 150px;
+    bottom: -40px;
+}
+
+.opening .opening-flower3 img {
+    width: 300px;
+    height: 300px;
+}
+
+.opening .opening-flower4 {
+    position: absolute;
+    width: 100%;
+    left: 150px;
+    top: 50px;
+    z-index: -1;
+}
+
+.opening .opening-flower4 img {
+    width: 150px;
+    height: 250px;
+}
+
+/* acara css */
+.acara {
+    position: relative;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/img/QUOTE.svg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    z-index: -1;
+}
+
+
+.acara .title {
+    display: block;
+    font-size: 4rem;
+    padding-top: 270px;
+    font-weight: 500;
+}
+
+.isi-acara {
+  position: relative;  
+}
+
+.isi-acara::before {
+    content: '';
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 1px;
+    background-color: var(--text-huruf-sambung);
+    left: 50%;
+}
+
+.acara .card-header {
+    font-size: 2.5rem;
+}
+
+.acara .card-body .date,
+.acara .card-body .clock,
+.acara .card-body i {
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.acara .card-footer {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin-top: 15px;
+}
+
+.acara .acara-footer {
+    margin-top: 15px;
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.acara .acara-flower1 {
+    position: absolute;
+    width: 100%;
+    right: 150px;
+    top: -50px;
+    z-index: -1;
+}
+
+.acara .acara-flower1 img {
+    width: 400px;
+    height: 400px;
+}
+
+.acara .acara-flower2 {
+    position: absolute;
+    width: 100%;
+    right: 185px;
+    bottom: -60px;
+    z-index: -1;
+}
+
+.acara .acara-flower2 img {
+    width: 250px;
+    height: 250px;
+}
+
+.acara .acara-flower3 {
+    position: absolute;
+    width: 100%;
+    left: 150px;
+    bottom: -40px;
+    z-index: -1;
+}
+
+.acara .acara-flower3 img {
+    width: 300px;
+    height: 300px;
+}
+
+.acara .acara-flower4 {
+    position: absolute;
+    width: 100%;
+    left: 150px;
+    top: 50px;
+    z-index: -1;
+}
+
+.acara .acara-flower4 img {
+    width: 150px;
+    height: 250px;
+}
+
+/* lokasi css */
+.lokasi {
+    position: relative;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/img/COVER.svg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.lokasi .title {
+    display: block;
+    font-size: 4rem;
+    padding-top: 180px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.lokasi iframe {
+    border: solid 1px var(--text-color);
+}
+
+.lokasi h3 {
+    color: var(--text-huruf-sambung);
+    font-size: 1.8rem;
+}
+
+.lokasi p {
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.lokasi a {
+    background: var(--text-huruf-sambung);
+    color: white;
+    font-size: 1.2rem;
+    box-shadow: var(--shadow);
+    z-index: 100;
+}
+
+.lokasi a:hover {
+    background: #e4e0d3;
+    color: var(--text-color);
+}
+
+.lokasi .lokasi-flower1 {
+    position: absolute;
+    width: 100%;
+    right: 150px;
+    top: -50px;
+    z-index: -1;
+}
+
+.lokasi .lokasi-flower1 img {
+    width: 400px;
+    height: 400px;
+}
+
+.lokasi .lokasi-flower2 {
+    position: absolute;
+    width: 100%;
+    right: 185px;
+    bottom: -60px;
+    z-index: -1;
+}
+
+.lokasi .lokasi-flower2 img {
+    width: 250px;
+    height: 250px;
+}
+
+.lokasi .lokasi-flower3 {
+    position: absolute;
+    width: 100%;
+    left: 150px;
+    bottom: -40px;
+    z-index: -1;
+}
+
+.lokasi .lokasi-flower3 img {
+    width: 300px;
+    height: 300px;
+}
+
+.lokasi .lokasi-flower4 {
+    position: absolute;
+    width: 100%;
+    left: 150px;
+    top: 50px;
+    z-index: -1;
+}
+
+.lokasi .lokasi-flower4 img {
+    width: 150px;
+    height: 250px;
+}
+
+/* rsvp css */
+.rsvp {
+    position: relative;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/img/QUOTE-2.svg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.rsvp .title {
+    display: block;
+    font-size: 3.5rem;
+    padding-top: 50px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    letter-spacing: 2.5px;  
+}
+
+.rsvp #countdown-wedding {
+    color: var(--text-color);
+}
+
+.rsvp h4 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.rsvp-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 5px auto;
+    padding: 10px;
+}
+
+.rsvp-container h2 {
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: 10px;
+    font-weight: 500;
+    margin: 20px auto;
+}
+
+.rsvp-container .form-label {
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+
+
+
+
+.audio-icon-wrapper {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 2.5rem;
+    position: fixed;
+    bottom: 2.5rem;
+    right: 230px;
+    z-index: 10;
+    cursor: pointer;
+    color: var(--text-huruf-sambung);
+    opacity: .7;
+    animation: discRotate 4s linear infinite;
+    transform-origin: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+}
+
+@keyframes discRotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* @keyframes myFlower { 
+    0% {
+        transform: rotateZ(0deg);
+    }
+    25% {
+        transform: rotateZ(10deg);
+    }
+    50% {
+        transform: rotateZ(0deg);
+    }
+    75% {
+        transform: rotateZ(10deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
+} */
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 451px) {
+    .container {
+        align-items: center;
+        max-width: 55%;
+        border-radius: 0;
+        box-shadow: none;
+        display: flex;
+        flex-direction: column;
+    }
+}
