@@ -3,6 +3,9 @@
     --text-huruf-sambung: #4d2b24;
     --black: #0a0a0a;
     --shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+    --background-button: #cfaa8e;
+    --white: #e4e0d3;
+    
 }
 * {
     margin: 0;
@@ -48,6 +51,7 @@ body {
     background-size: cover;
     background-position: center;
     overflow: hidden;
+    z-index: 1;
 }
 
 .hero .flower1 {
@@ -55,6 +59,7 @@ body {
     width: 100%;
     right: 95px;
     top: 20px;
+    z-index: 1;
 }
 
 .hero .flower1 img {
@@ -67,7 +72,7 @@ body {
     width: 100%;
     left: 118px;
     top: 400px;
-    z-index: 10;
+    z-index: 1;
     animation: myFlower linear 10s infinite;
 }
 .hero .flower2 img {
@@ -136,23 +141,24 @@ body {
     z-index: 1;
 }
 
-.hero .btn {
+.btn-main {
     position: relative;
-    background: var(--text-huruf-sambung);
+    align-items: center;
+    background: var(--background-button);
     border: none;
-    box-shadow: var(--shadow);
-    font-size: 1rem;
+    padding: 10px auto;
+    font-size: 1.2rem;
     margin-top: 20px;
     height: 100%;
-    z-index: 100;
-    color: white;
+    color: var(--text-huruf-sambung);
     font-weight: 400;
+    z-index: 100;
     transition: .5s;
 }
 
 .hero .btn:hover {
-    background: #e4e0d3;
-    color: var(--text-color); 
+    background: var(--text-huruf-sambung);
+    color: var(--white); 
 }
 
 
@@ -260,18 +266,23 @@ body {
 .quote .footer-section,
 .opening .footer-section,
 .acara .footer-section,
-.lokasi .footer-section {
+.lokasi .footer-section,
+.doa .footer-section,
+.penutup .footer-section {
     position: absolute;
     display: block;
     width: 100%;
-    bottom: 100px;
+    right: -0.4px;
+    bottom: 90px;
     z-index: -1;
 }
 
 .quote .footer-section img,
 .opening .footer-section img,
 .acara .footer-section img,
-.lokasi .footer-section img{
+.lokasi .footer-section img,
+.doa .footer-section img,
+.penutup .footer-section img {
     width: 200px;
     height: 100px;
 }
@@ -388,19 +399,21 @@ body {
     background-size: cover;
     background-position: center;
     overflow: hidden;
-    z-index: -1;
+    z-index: 1;
 }
 
 
 .acara .title {
     display: block;
     font-size: 4rem;
-    padding-top: 270px;
+    padding-top: 260px;
     font-weight: 500;
+    letter-spacing: 1.2px;
 }
 
 .isi-acara {
   position: relative;  
+  z-index: 10;
 }
 
 .isi-acara::before {
@@ -415,19 +428,44 @@ body {
 
 .acara .card-header {
     font-size: 2.5rem;
+    letter-spacing: 1.2px;
+}
+
+.acara .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body span {
+    margin: 5px auto;
 }
 
 .acara .card-body .date,
 .acara .card-body .clock,
 .acara .card-body i {
     color: var(--text-color);
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }
 
 .acara .card-footer {
     color: var(--text-color);
     font-size: 1.1rem;
-    margin-top: 15px;
+    margin: 10px auto;
+    z-index: 1;
+}
+
+.card-footer .btn-calendar {
+    background: var(--background-button);
+    color: var(--text-huruf-sambung);
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.card-footer .btn-calendar:hover {
+    background: var(--text-huruf-sambung);
+    color: var(--white);
 }
 
 .acara .acara-footer {
@@ -503,12 +541,14 @@ body {
     z-index: 1;
 }
 
-.lokasi .title {
+.lokasi .title,
+.gift .title {
     display: block;
     font-size: 4rem;
     padding-top: 180px;
     font-weight: 500;
     margin-bottom: 20px;
+    letter-spacing: 1.5px;
 }
 
 .lokasi iframe {
@@ -526,16 +566,16 @@ body {
 }
 
 .lokasi a {
-    background: var(--text-huruf-sambung);
-    color: white;
+    background: var(--background-button);
+    color: var(--text-huruf-sambung);
     font-size: 1.2rem;
     box-shadow: var(--shadow);
     z-index: 100;
 }
 
 .lokasi a:hover {
-    background: #e4e0d3;
-    color: var(--text-color);
+    background: var(--text-huruf-sambung);
+    color: var(--white);
 }
 
 .lokasi .lokasi-flower1 {
@@ -598,23 +638,19 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(assets/img/QUOTE-2.svg);
+    background-image: url(assets/img/QUOTE.svg);
     background-size: cover;
     background-position: center;
     overflow: hidden;
+    z-index: 1;
 }
 
 .rsvp .title {
-    display: block;
-    font-size: 3.5rem;
-    padding-top: 50px;
+    padding-top: 130px;
+    font-size: 3rem;
     font-weight: 500;
-    margin-bottom: 20px;
-    letter-spacing: 2.5px;  
-}
-
-.rsvp #countdown-wedding {
-    color: var(--text-color);
+    letter-spacing: 10px;
+    margin: 20px auto;
 }
 
 .rsvp h4 {
@@ -626,21 +662,301 @@ body {
     position: relative;
     width: 100%;
     max-width: 500px;
-    margin: 5px auto;
+    margin: 10px 0 10px 0;
     padding: 10px;
-}
-
-.rsvp-container h2 {
-    text-align: center;
-    font-size: 3rem;
-    letter-spacing: 10px;
-    font-weight: 500;
-    margin: 20px auto;
 }
 
 .rsvp-container .form-label {
     color: var(--text-color);
-    font-size: 1.2rem;
+    font-size: 1rem;
+}
+
+.rsvp-container .form-control,
+.rsvp-container option {
+    color: var(--text-color);
+}
+
+.rsvp-container button {
+    background: var(--background-button);
+    color: var(--text-huruf-sambung);
+    width: 6rem;
+    letter-spacing: 1.5px;
+    box-shadow: var(--shadow);
+}
+
+.rsvp-container button:hover {
+    background: var(--text-huruf-sambung);
+    color: var(--white);
+}
+
+#rsvp-display {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    width: 320px;
+    height: 170px;
+    overflow-y: scroll;
+    background-color: rgba(228, 224, 211, .3);
+    z-index: 2;
+}
+
+#rsvp-list {
+    position: absolute;
+    display: block;
+    list-style: none;
+    color: var(--text-color);
+    margin: 10px auto;
+}
+
+#rsvp-list li {
+    text-align: left;
+    border-radius: 5px;
+    background-color: rgba(255, 2555, 255, .7);
+    width: 265px;
+    height: 100%;
+    margin: 10px auto;
+    padding: 5px;
+    letter-spacing: .5px;
+}
+
+/* gift css */
+.gift {
+    position: relative;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/img/COVER.svg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.gift p {
+    display: inline-flex;
+    flex-direction: column;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    width: 100%;
+    max-width: 350px;
+}
+
+.btn-box {
+    display: block;
+    width: 50%; 
+    max-width: 300px; 
+    margin: 15px auto;
+    background: var(--background-button);
+    color: var(--text-huruf-sambung);
+    z-index: 2;
+    box-shadow: var(--shadow);
+}
+
+.collapse {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.btn-box:hover {
+    background-color: var(--text-huruf-sambung);
+    color: var(--white);
+}
+.credit-card {
+	background: url(assets/img/card-background.png);
+	background-size: cover;
+	border-radius: 15px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+	padding: 20px;
+	width: 300px;
+	color: var(--text-color);
+	position: absolute;
+    z-index: 2;
+}
+
+.card-logo {
+	width: 75px;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+.card-container {
+	display: flex;
+	align-items: center;
+	margin-top: 50px;
+}
+
+#alamat {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#alamat .alamat {
+    font-size: 1.1rem;
+    color: var(--text-huruf-sambung);
+    margin-bottom: 5px;
+}
+
+#alamat .card-number {
+    font-family: 'Lora', sans-serif;
+    font-size: 1rem;
+    color: var(--text-color);
+    letter-spacing: 1px;
+}
+
+.card-sim {
+	width: 30px;
+	margin-right: 10px;
+}
+
+.card-number {
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 22px;
+}
+
+.card-name {
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 16px;
+	text-align: left;
+	margin-top: 10px;
+}
+
+.copy-button {
+	font-family: 'Courier New', Courier, monospace;
+	position: absolute;
+    width: auto;
+    max-width: none;
+    margin: 0;
+	top: 5px;
+	left: 15px;
+	background-color: white;
+	color: black;
+	border: none;
+	padding: 5px 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 20px;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.gift .footer-section {
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 100px;
+    z-index: 1;
+}
+
+.gift .footer-section img {
+    width: 200px;
+    height: 100px;
+}
+
+/* doa css */
+.doa {
+    position: relative;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/img/QUOTE.svg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.doa .title {
+    display: block;
+    font-size: 3.5rem;
+    margin-top: 210px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    letter-spacing: 1.5px;
+}
+
+.doa .arab {
+    color: var(--text-color);
+    font-size: 2.3rem;
+}
+
+.doa p {
+    display: inline-flex;
+    flex-direction: column;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    margin-top: 20px;
+    max-width: 100%;
+    width: 250px;
+}
+
+.doa p span {
+    margin: 10px auto;
+}
+
+.doa h3 {
+    margin-top: 25px;
+    color: var(--text-huruf-sambung);
+    font-size: 1.5rem;
+}
+
+/* penutup section */
+.penutup {
+    position: relative;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/img/COVER.svg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.penutup h4 {
+    color: var(--text-color);
+    font-size: 1.3rem;
+}
+
+.penutup h4:nth-child(1) {
+    margin-top: 220px;
+}
+
+.penutup h4:nth-child(3) {
+    margin: 15px auto;
+}
+
+.penutup h3 {
+    color: var(--text-color);
+    font-size: 1.4rem;
+}
+
+.penutup h2 {
+    font-size: 4.3rem;
+    margin: 12px auto;
+}
+
+.penutup .keluarga {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.penutup h5 {
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin-top: 5.5px;
 }
 
 
@@ -687,7 +1003,7 @@ body {
         transform: rotateZ(0deg);
     }
     75% {
-        transform: rotateZ(10deg);
+        transform: rotateZ(-20deg);
     }
     100% {
         transform: rotateZ(0deg);

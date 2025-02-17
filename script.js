@@ -1,94 +1,145 @@
 AOS.init();
 
-// countdown wedding
-var countdownDate = new Date("Jul 12, 2025 11:00:00").getTime()
+// const rootElement = document.querySelector(":root");
+// const audioIconWrapper = document.querySelector('.audio-icon-wrapper');
+// const audioIcon = document.querySelector('.audio-icon-wrapper i')
+// let isPlaying = false;
+// const bgm = document.querySelector('#bgm');
 
-var x = setInterval(function () {
-    var now = new Date().getTime()
+// function disableScroll() {
+//     scrollTop = window.scrollY || document.documentElement.scrollTop;
+//     scrollLeft = window.scrollX || document.documentElement.scrollLeft;
 
-    var distance = countdownDate - now
+//     window.onscroll = function() {
+//         window.scrollTo(scrollTop, scrollLeft);
+//     }
 
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24))
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 *60))
-    var minutes = Math.floor((distance % (1000 * 60 *60)) / (1000 * 60))
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000)
+//     rootElement.style.scrollBehavior = 'auto';
+// }
 
-    document.getElementById('countdown-wedding').innerHTML = `
-        <div class="col-lg-1 col-3"><div class="text-center p-2 rounded"><h5>${days}</h5> Hari</div></div>
-        <div class="col-lg-1 col-3"><div class="text-center p-2 rounded"><h5>${hours}</h5> Jam</div></div>
-        <div class="col-lg-1 col-3"><div class="text-center p-2 rounded"><h5>${minutes}</h5> Menit</div></div>
-        <div class="col-lg-1 col-3"><div class="text-center p-2 rounded"><h5>${seconds}</h5> Detik</div></div>
-    `
-    if (distance < 0) {
-        clearInterval(x)
-        document.getElementById('countdown-wedding').innerHTML = "<span class'text-center p-3 rounded text-light m-2'><h2>Sudah dimulai</h2></span>"
+// function enableScroll() {
+//     window.onscroll = function() { }
+//     rootElement.style.scrollBehavior = 'smooth';
+//     // localStorage.setItem('opened', 'true');
+//     playAudio();
+// }
+
+// function playAudio() {
+//   bgm.volume = 0.1;
+//   audioIconWrapper.style.display = 'flex';
+//   bgm.play();
+//   isPlaying = true;
+// }
+
+// audioIconWrapper.onclick = function() {
+//   if(isPlaying) {
+//     bgm.pause();
+//     audioIcon.classList.remove('bi-disc-fill');
+//     audioIcon.classList.add('bi-pause-circle-fill');
+//   } else {
+//     bgm.play();
+//     audioIcon.classList.remove('bi-pause-circle-fill');
+//     audioIcon.classList.add('bi-disc-fill');
+//   }
+
+//   isPlaying = !isPlaying;
+// }
+
+
+// disableScroll();
+
+// gift js
+$(document).ready(function() {
+  var $btnRekening = $('#btnRekening');
+  var $btnAlamat = $('#btnAlamat');
+  var $collapseHadiah = $('#collapseHadiah');
+  var $collapseAlamat = $('#collapseAlamat');
+
+  // Fungsi untuk menampilkan/menyembunyikan elemen collapse
+  function toggleCollapse(targetElement) {
+    // Jika elemen yang diklik adalah collapseHadiah
+    if (targetElement.is($collapseHadiah)) {
+      $collapseHadiah.toggleClass('show');
+      $collapseAlamat.removeClass('show');
+      $collapseAlamat.addClass('collapse');
     }
-}, 1000)
-
-const rootElement = document.querySelector(":root");
-const audioIconWrapper = document.querySelector('.audio-icon-wrapper');
-const audioIcon = document.querySelector('.audio-icon-wrapper i')
-let isPlaying = false;
-const bgm = document.querySelector('#bgm');
-
-function disableScroll() {
-    scrollTop = window.scrollY || document.documentElement.scrollTop;
-    scrollLeft = window.scrollX || document.documentElement.scrollLeft;
-
-    window.onscroll = function() {
-        window.scrollTo(scrollTop, scrollLeft);
+    // Jika elemen yang diklik adalah collapseAlamat
+    else if (targetElement.is($collapseAlamat)) {
+      $collapseAlamat.toggleClass('show');
+      $collapseHadiah.removeClass('show');
+      $collapseHadiah.addClass('collapse');
     }
-
-    rootElement.style.scrollBehavior = 'auto';
-}
-
-function enableScroll() {
-    window.onscroll = function() { }
-    rootElement.style.scrollBehavior = 'smooth';
-    // localStorage.setItem('opened', 'true');
-    playAudio();
-}
-
-function playAudio() {
-  bgm.volume = 0.1;
-  audioIconWrapper.style.display = 'flex';
-  bgm.play();
-  isPlaying = true;
-}
-
-audioIconWrapper.onclick = function() {
-  if(isPlaying) {
-    bgm.pause();
-    audioIcon.classList.remove('bi-disc-fill');
-    audioIcon.classList.add('bi-pause-circle-fill');
-  } else {
-    bgm.play();
-    audioIcon.classList.remove('bi-pause-circle-fill');
-    audioIcon.classList.add('bi-disc-fill');
   }
 
-  isPlaying = !isPlaying;
-}
+  // Event listener untuk tombol Rekening
+  $btnRekening.on('click', function(e) {
+    e.preventDefault();
+    toggleCollapse($collapseHadiah);
+  });
 
+  // Event listener untuk tombol Alamat
+  $btnAlamat.on('click', function(e) {
+    e.preventDefault();
+    toggleCollapse($collapseAlamat);
+  });
 
-disableScroll();
-
-window.addEventListener("load", function() {
-    const form = document.getElementById('my-form');
-    form.addEventListener("submit", function(e) {
-      e.preventDefault();
-      const data = new FormData(form);
-      const action = e.target.action;
-      fetch(action, {
-        method: 'POST',
-        body: data,
-      })
-      .then(() => {
-        alert("Konfirmasi kehadiran berhasil terkirim!");
-      })
-    });
+  // Event listener untuk menyembunyikan collapse saat mengklik di luar area gift
+  $(document).on('click', function(e) {
+    // Memeriksa jika elemen yang diklik berada di dalam #gift
+    if ($(e.target).closest('#gift').length) {
+      // Menutup semua elemen collapse
+      $('#collapseHadiah, #collapseAlamat').removeClass('show').addClass('collapse');
+    }
+  });
 });
 
+// function copyText(el, event) {
+//   event.stopPropagation();
+//   var cardContainer = jQuery(el).siblings('div.credit-card');
+//   var isAlamat = cardContainer.find('.alamat').length > 0;
+//   var content = cardContainer.find('.card-number').text().trim();
+//   var textToCopy = isAlamat ? content : content.replace(/\s+/g, '');
+
+//   navigator.clipboard.writeText(textToCopy)
+//     .then(() => {
+//       jQuery(el).text('Berhasil di copy');
+
+//       setTimeout(function() {
+//         jQuery(el).html(`<i class="bi bi-copy"></i> Copy`);
+//       }, 1000);
+//     })
+//     .catch((err) => {
+//       console.error('Gagal menyalin teks: ', err);
+//       jQuery(el).text('Gagal menyalin');
+//     });
+// }
+
+function copyText(el, event) {
+  event.stopPropagation();
+  var cardContainer = jQuery(el).siblings('div.card-container');
+  var isAlamat = cardContainer.find('.alamat').length > 0;
+
+  var content = cardContainer.find('.card-number').text().trim();
+
+  var textToCopy = isAlamat ? content : content.replace(/\s+/g, '');
+
+
+  navigator.clipboard.writeText(textToCopy)
+      .then(() => {
+          
+          jQuery(el).text('Berhasil di copy');
+
+          
+          setTimeout(function () {
+              jQuery(el).html(`<i class="bi bi-copy"></i> Copy`);
+          }, 1000);
+      })
+      .catch((err) => {
+          
+          console.error('Gagal menyalin teks: ', err);
+          jQuery(el).text('Gagal menyalin');
+      });
+}
 
 const urlParams = new URLSearchParams(window.location.search);
 const nama = urlParams.get('nama') || '';
@@ -99,3 +150,76 @@ namaContainer.innerText = `${pronoun} ${nama}`.replace(/ ,$/, ',');
 
 document.querySelector('#nama').value = nama;
 
+
+
+// Pastikan kode ini dijalankan setelah dokumen HTML selesai dimuat
+document.addEventListener('DOMContentLoaded', function() {
+  const sheetDBApiUrl = 'https://sheetdb.io/api/v1/4rrxsy7lhwl4x'; // Ganti dengan API ID Anda
+  const rsvpList = document.getElementById('rsvp-list');
+  const form = document.getElementById('my-form'); // Ganti 'my-form' dengan ID formulir Anda
+
+  // Fungsi untuk menampilkan data (seperti sebelumnya)
+  function displayRsvpData() {
+    fetch(sheetDBApiUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        if (Array.isArray(data)) {
+          rsvpList.innerHTML = ''; // Bersihkan daftar sebelum menambahkan data baru
+          data.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `<b>${item.nama} (${item.kehadiran}),</b><br><p>${item.ucapan}<p>`;
+            rsvpList.appendChild(listItem);
+          });
+        } else {
+          console.error('Data yang diterima dari SheetDB bukan array:', data);
+          rsvpList.textContent = 'Terjadi kesalahan saat memuat data.';
+        }
+      })
+      .catch(error => {
+        console.error('Gagal mengambil data dari SheetDB:', error);
+        rsvpList.textContent = 'Terjadi kesalahan saat memuat data.';
+      });
+  }
+
+  // Panggil fungsi untuk menampilkan data saat halaman dimuat
+  displayRsvpData();
+
+  // Cegah pengiriman formulir default dan kirim data dengan fetch
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Mencegah pengiriman formulir default
+
+    // Kumpulkan data formulir
+    const formData = new FormData(form);
+
+    // Kirim data ke SheetDB dengan fetch
+    fetch(sheetDBApiUrl, {
+      method: 'POST',
+      body: formData,
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      // Tampilkan pesan sukses (gunakan window.alert atau SweetAlert2)
+      window.alert('Data berhasil dikirim!');
+
+      // Reset formulir
+      form.reset();
+
+      // Perbarui tampilan data
+      displayRsvpData();
+    })
+    .catch(error => {
+      console.error('Gagal mengirim data ke SheetDB:', error);
+      window.alert('Terjadi kesalahan saat mengirim data.');
+    });
+  });
+});
