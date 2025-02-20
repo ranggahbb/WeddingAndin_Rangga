@@ -31,17 +31,17 @@ body {
 .custom-container {
     width: 100%;
     max-width: 471px;
+    min-height: 100vh;
     margin: 0 auto;
     flex: 1;
-    /* display: flex; */
-    justify-content: center;
-    align-items: center;
-  }
+}
 
 .huruf-sambung {
     font-family: 'SymphonyPro-Regular', cursive;
     color: var(--text-huruf-sambung);
 }
+
+/* hero css */
 
 .hero {
     position: relative;
@@ -49,7 +49,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: auto%;
+    height: 100%;
     background-image: url(assets/img/COVER.svg);
     background-size: cover;
     background-position: center;
@@ -378,6 +378,7 @@ body {
     z-index: 1;
 }
 
+
 .opening .col-8 {
     z-index: 100;
 }
@@ -415,6 +416,14 @@ body {
 
 .opening h5 {
     font-size: 2.3rem;
+}
+
+.opening .image-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    
 }
 
 .opening .opening-bottom img,
@@ -492,24 +501,23 @@ body {
     height: auto;
     top: 30rem;
     left: 12rem;
-    z-index: ;
+    z-index: 1;
 }
 
 .opening .opening-gate {
     position: absolute;
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
     margin: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
     
 }
 
 .opening .opening-gate img {
     height: 70rem;
     width: 55rem;
-    opacity: .7;
+    opacity: 1;
 }
 
 /* acara css */
@@ -1120,9 +1128,73 @@ body {
     }
 
     .costum-container {
+        
+        max-width: 430px;
         width: 100%;
         display: flex;
         flex-direction: column;
+    }
+
+    section {
+        padding: 2rem auto;
+    }
+
+    .hero {
+        min-height: calc(100vh - 100px);
+        display: flex;
+        flex-direction: column;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        position: relative; 
+        overflow: hidden;
+    }
+
+    .quote {
+        min-height: calc(100vh - 100px);
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .opening {
+        min-height: calc(100vh - 100px);
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    .acara {
+        min-height: calc(100vh - 100px);
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .lokasi {
+        min-height: calc(100vh - 100px);
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .rsvp {
+        min-height: calc(100vh - 100px);
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .gift {
+        min-height: calc(100vh - 100px);
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .doa {
+        min-height: calc(100vh - 100px);
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .penutup {
+        min-height: calc(100vh - 100px);
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 }
 
