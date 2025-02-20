@@ -48,6 +48,16 @@ AOS.init();
 
 // disableScroll();
 
+// navbar js
+const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasNavbar'));
+        offcanvas.hide();
+      });
+    });
+
+
 // gift js
 $(document).ready(function() {
   var $btnRekening = $('#btnRekening');
@@ -55,15 +65,12 @@ $(document).ready(function() {
   var $collapseHadiah = $('#collapseHadiah');
   var $collapseAlamat = $('#collapseAlamat');
 
-  // Fungsi untuk menampilkan/menyembunyikan elemen collapse
   function toggleCollapse(targetElement) {
-    // Jika elemen yang diklik adalah collapseHadiah
     if (targetElement.is($collapseHadiah)) {
       $collapseHadiah.toggleClass('show');
       $collapseAlamat.removeClass('show');
       $collapseAlamat.addClass('collapse');
     }
-    // Jika elemen yang diklik adalah collapseAlamat
     else if (targetElement.is($collapseAlamat)) {
       $collapseAlamat.toggleClass('show');
       $collapseHadiah.removeClass('show');
@@ -71,48 +78,24 @@ $(document).ready(function() {
     }
   }
 
-  // Event listener untuk tombol Rekening
   $btnRekening.on('click', function(e) {
     e.preventDefault();
     toggleCollapse($collapseHadiah);
   });
 
-  // Event listener untuk tombol Alamat
   $btnAlamat.on('click', function(e) {
     e.preventDefault();
     toggleCollapse($collapseAlamat);
   });
 
-  // Event listener untuk menyembunyikan collapse saat mengklik di luar area gift
+  
   $(document).on('click', function(e) {
-    // Memeriksa jika elemen yang diklik berada di dalam #gift
     if ($(e.target).closest('#gift').length) {
-      // Menutup semua elemen collapse
       $('#collapseHadiah, #collapseAlamat').removeClass('show').addClass('collapse');
     }
   });
 });
 
-// function copyText(el, event) {
-//   event.stopPropagation();
-//   var cardContainer = jQuery(el).siblings('div.credit-card');
-//   var isAlamat = cardContainer.find('.alamat').length > 0;
-//   var content = cardContainer.find('.card-number').text().trim();
-//   var textToCopy = isAlamat ? content : content.replace(/\s+/g, '');
-
-//   navigator.clipboard.writeText(textToCopy)
-//     .then(() => {
-//       jQuery(el).text('Berhasil di copy');
-
-//       setTimeout(function() {
-//         jQuery(el).html(`<i class="bi bi-copy"></i> Copy`);
-//       }, 1000);
-//     })
-//     .catch((err) => {
-//       console.error('Gagal menyalin teks: ', err);
-//       jQuery(el).text('Gagal menyalin');
-//     });
-// }
 
 function copyText(el, event) {
   event.stopPropagation();

@@ -11,7 +11,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* scroll-behavior: smooth; */
     text-decoration: none;
     border: none;
     outline: none;
@@ -25,15 +24,19 @@ html {
 body {
     font-family: 'Lora', sans-serif;
     min-height: 4000px;
+    display: flex;
+    flex-direction: column;
 }
 
-.container {
-    max-width: 471px;
+.custom-container {
     width: 100%;
-    text-align: center;
+    max-width: 471px;
+    margin: 0 auto;
+    flex: 1;
+    /* display: flex; */
     justify-content: center;
-    overflow: hidden;
-}
+    align-items: center;
+  }
 
 .huruf-sambung {
     font-family: 'SymphonyPro-Regular', cursive;
@@ -46,7 +49,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto%;
     background-image: url(assets/img/COVER.svg);
     background-size: cover;
     background-position: center;
@@ -57,61 +60,67 @@ body {
 .hero .flower1 {
     position: absolute;
     width: 100%;
-    right: 95px;
-    top: 20px;
+    height: auto;
+    right: 10rem;
+    top: 2rem;
     z-index: 1;
 }
 
 .hero .flower1 img {
-    width: 250px;
-    height: 350px;
+    width: 25rem;
+    height: 35rem;
 }
 
 .hero .flower2 {
     position: absolute;
     width: 100%;
-    left: 118px;
-    top: 400px;
-    z-index: 1;
+    height: auto;
+    left: 11.5rem;
+    top: 40rem;
+    z-index: 2;
     animation: myFlower linear 10s infinite;
 }
 .hero .flower2 img {
-    width: 250px;
-    height: 300px;
+    width: 25rem;
+    height: 30rem;
 }
 
 .hero .flower3 {
     position: absolute;
     width: 100%;
-    left: 178px;
-    top: 290px;
+    height: auto;
+    left: 17.5rem;
+    top: 30rem;
     z-index: 1;
     animation: myFlower linear 10s infinite;
 }
 
 .hero .flower3 img {
-    width: 150px;
-    height: 200px;
+    width: 15rem;
+    height: 20rem;
 }
 
 .hero .dekorasi {
     position: absolute;
     width: 100%;
-    top: 310px;
-    right: 60px;
+    height: auto;
+    top: 31rem;
+    right: 6rem;
+    
 }
 
 .hero .dekorasi2 {
     position: absolute;
     width: 100%;
-    top: 310px;
-    right: -64px;
+    height: auto;
+    top: 31rem;
+    left: 6.3rem;
 }
 
 .hero .dekorasi img,
 .hero .dekorasi2 img {
-    width: 150px;
-    height: 50px;
+    width: 15rem;
+    height: 5rem;
 }
 
 .hero .dekorasi2 img {
@@ -121,23 +130,23 @@ body {
 .hero h4 {
     color: var(--text-color);
     font-size: 1.5rem;
-    padding-top: 180px;
-    margin-bottom: 60px;
+    padding-top: 18rem;
+    margin-bottom: 6rem;
     z-index: 1;
     font-weight: 300;
 }
 
 .hero h1 {
     font-size: 4.5rem;
-    line-height: 50px;
+    line-height: 5rem;
     z-index: 1;
 }
 
 .hero h5 {
     color: var(--text-color);
     font-size: 1.3rem;
-    margin: 30px 0 5px;
-    line-height: 25px;
+    margin: 3rem 0 .5rem;
+    line-height: 2.5rem;
     z-index: 1;
 }
 
@@ -146,14 +155,15 @@ body {
     align-items: center;
     background: var(--background-button);
     border: none;
-    padding: 10px auto;
+    padding: 1rem auto;
     font-size: 1.2rem;
-    margin-top: 20px;
+    margin-top: 2rem;
     height: 100%;
     color: var(--text-huruf-sambung);
     font-weight: 400;
     z-index: 100;
-    transition: .5s;
+    transition: 1s;
+    box-shadow: var(--shadow);
 }
 
 .hero .btn:hover {
@@ -161,10 +171,31 @@ body {
     color: var(--white); 
 }
 
+/* navbar css */
+.mynavbar {
+    background-color: rgba(228, 224, 211, .7) !important;
+}
+
+.mynavbar .navbar-brand,
+.mynavbar .offcanvas-title {
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+
+.mynavbar a {
+    font-weight: 400;
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    transition: .3s;
+}
+
+.mynavbar a:hover {
+    color: var(--text-huruf-sambung);
+}
 
 
-
-/* navbar */
 
 /* quote css */
 
@@ -176,115 +207,159 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     background-size: cover;
     background-position: center;
-    z-index: -1;
     overflow: hidden
 }
 
 .quote p {
-    margin-top: 280px;
+    margin-top: 28rem;
     color: var(--text-color);
     text-wrap: wrap;
     font-size: 1.5rem;
     font-weight: 300;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 .quote h4 {
     color: var(--text-color);
     font-size: 1.6rem;
     font-weight: 800;
-    /* text-shadow: var(--shadow); */
 }
 
 .quote .logo,
 .acara .logo {
     position: absolute;
     width: 100%;
+    height: auto;
     justify-content: center;
     align-items: center;
     display: block;
-    margin-top: 140px;
+    margin-top: 14rem;
+    z-index: 1;
 }
 
 .quote .logo img,
 .acara .logo img {
-    width: 100px;
-    height: 100px;
+    width: 10rem;
+    height: 10rem;
 }
 
-.quote .quote-flower1 {
+.quote .quote-flower1,
+.acara .acara-flower1,
+.lokasi .lokasi-flower1,
+.gift .gift-flower1,
+.doa .doa-flower1 {
     position: absolute;
     width: 100%;
-    right: 150px;
-    top: -50px;
+    height: auto;
+    right: 15rem;
+    top: -5rem;
+    z-index: 1;
 }
 
-.quote .quote-flower1 img {
-    width: 400px;
-    height: 400px;
+.quote .quote-flower1 img,
+.acara .acara-flower1 img,
+.lokasi .lokasi-flower1 img,
+.gift .gift-flower1 img,
+.doa .doa-flower1 img {
+    width: 40rem;
+    height: 40rem;
 }
 
-.quote .quote-flower2 {
+.quote .quote-flower2,
+.acara .acara-flower2,
+.lokasi .lokasi-flower2,
+.gift .gift-flower2,
+.doa .doa-flower2 {
     position: absolute;
     width: 100%;
-    right: 185px;
-    bottom: -60px;
+    height: auto;
+    right: 20rem;
+    top: 52rem;
+    z-index: 1;
 }
 
-.quote .quote-flower2 img {
-    width: 250px;
-    height: 250px;
+.quote .quote-flower2 img,
+.acara .acara-flower2 img,
+.lokasi .lokasi-flower2 img,
+.gift .gift-flower2 img,
+.doa .doa-flower2 img {
+    width: 25rem;
+    height: 25rem;
 }
 
-.quote .quote-flower3 {
+.quote .quote-flower3,
+.acara .acara-flower3,
+.lokasi .lokasi-flower3,
+.gift .gift-flower3,
+.doa .doa-flower3 {
     position: absolute;
     width: 100%;
-    left: 150px;
-    bottom: -40px;
+    height: auto;
+    left: 15rem;
+    top: 37rem;
+    z-index: 1;
 }
 
-.quote .quote-flower3 img {
-    width: 300px;
-    height: 300px;
+.quote .quote-flower3 img,
+.acara .acara-flower3 img,
+.lokasi .lokasi-flower3 img,
+.gift .gift-flower3 img,
+.doa .doa-flower3 img{
+    width: 40rem;
+    height: 40rem;
 }
 
-.quote .quote-flower4 {
+.quote .quote-flower4,
+.acara .acara-flower4,
+.lokasi .lokasi-flower4,
+.gift .gift-flower4,
+.doa .doa-flower4 {
     position: absolute;
     width: 100%;
-    left: 150px;
-    top: 50px;
+    height: auto;
+    left: 15rem;
+    top: 4rem;
+    z-index: 1;
 }
 
-.quote .quote-flower4 img {
-    width: 150px;
-    height: 250px;
+.quote .quote-flower4 img,
+.acara .acara-flower4 img,
+.lokasi .lokasi-flower4 img,
+.gift .gift-flower4 img,
+.doa .doa-flower4 img {
+    width: 15rem;
+    height: 25rem;
 }
 
 .quote .footer-section,
 .opening .footer-section,
 .acara .footer-section,
 .lokasi .footer-section,
+.gift .footer-section,
 .doa .footer-section,
 .penutup .footer-section {
     position: absolute;
     display: block;
     width: 100%;
-    right: -0.4px;
-    bottom: 90px;
-    z-index: -1;
+    height: auto;
+    top: 52rem;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
 }
 
 .quote .footer-section img,
 .opening .footer-section img,
 .acara .footer-section img,
 .lokasi .footer-section img,
+.gift .footer-section img,
 .doa .footer-section img,
 .penutup .footer-section img {
-    width: 200px;
-    height: 100px;
+    width: 20rem;
+    height: 10rem;
 }
 
 /* opening css */
@@ -295,20 +370,24 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-image: url(assets/img/COVER.svg);
+    height: auto;
+    background-image: url(assets/img/COVER-2.svg);
     background-size: cover;
     background-position: center;
     overflow: hidden;
-    z-index: -1;
+    z-index: 1;
+}
+
+.opening .col-8 {
+    z-index: 100;
 }
 
 .opening h3 {
     display: block;
-    padding-top: 170px;
+    padding-top: 17rem;
     font-size: 2.7rem;
     color: var(--text-color);  
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     z-index: 1;
 }
 
@@ -318,7 +397,7 @@ body {
     font-size: 1.5rem;
     text-align: center;
     font-weight: 700;
-    margin-bottom: 25px;
+    margin-bottom: 2.5rem;
     /* text-shadow: var(--shadow); */
 }
 
@@ -326,10 +405,11 @@ body {
     font-size: 1.3rem;
     color: var(--text-color);
     font-weight: 500;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 .opening h1 {
+    margin-top: 2.5rem;
     font-size: 4rem;
 }
 
@@ -337,54 +417,99 @@ body {
     font-size: 2.3rem;
 }
 
-.opening .opening-flower1 {
-    position: absolute;
-    width: 100%;
-    right: 150px;
-    top: -50px;
-    z-index: -1;
+.opening .opening-bottom img,
+.rsvp .opening-bottom img,
+.penutup .opening-bottom img {
+    width: 100rem;
+    height: 32rem;
 }
 
-.opening .opening-flower1 img {
-    width: 400px;
-    height: 400px;
+.opening .opening-bottom,
+.rsvp .opening-bottom,
+.penutup .opening-bottom {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: block;
+    top: 46.5rem;
+    right: 25rem;
+    z-index: 1;
+}
+
+.opening .opening-flower2 img {
+    width: 18rem;
+    height: 45rem;
 }
 
 .opening .opening-flower2 {
     position: absolute;
     width: 100%;
-    right: 185px;
-    bottom: -60px;
+    height: auto;
+    display: block;
+    top: -4rem;
+    left: -15rem;
+    z-index: 5;
 }
 
-.opening .opening-flower2 img {
-    width: 250px;
-    height: 250px;
+.opening .opening-flower3 img {
+    width: 14rem;
+    height: 40rem;
+    transform: rotateY(180deg);
 }
 
 .opening .opening-flower3 {
     position: absolute;
     width: 100%;
-    left: 150px;
-    bottom: -40px;
+    height: auto;
+    display: block;
+    top: 3rem;
+    left: 16rem;
+    z-index: 5;
 }
 
-.opening .opening-flower3 img {
-    width: 300px;
-    height: 300px;
+.opening .opening-flower4 img {
+    width: 50rem;
+    height: 50rem;
 }
 
 .opening .opening-flower4 {
     position: absolute;
     width: 100%;
-    left: 150px;
-    top: 50px;
-    z-index: -1;
+    height: auto;
+    top: 18rem;
+    left: -4rem;
+    z-index: 1;
 }
 
-.opening .opening-flower4 img {
-    width: 150px;
-    height: 250px;
+.opening .opening-flower5 img {
+    width: 40rem;
+    height: 40rem;
+}
+
+.opening .opening-flower5 {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 30rem;
+    left: 12rem;
+    z-index: ;
+}
+
+.opening .opening-gate {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.opening .opening-gate img {
+    height: 70rem;
+    width: 55rem;
+    opacity: .7;
 }
 
 /* acara css */
@@ -394,7 +519,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     background-image: url(assets/img/QUOTE.svg);
     background-size: cover;
     background-position: center;
@@ -406,7 +531,7 @@ body {
 .acara .title {
     display: block;
     font-size: 4rem;
-    padding-top: 260px;
+    padding-top: 26rem;
     font-weight: 500;
     letter-spacing: 1.2px;
 }
@@ -437,7 +562,7 @@ body {
 }
 
 .card-body span {
-    margin: 5px auto;
+    margin: .5rem auto;
 }
 
 .acara .card-body .date,
@@ -450,7 +575,7 @@ body {
 .acara .card-footer {
     color: var(--text-color);
     font-size: 1.1rem;
-    margin: 10px auto;
+    margin: 1rem auto;
     z-index: 1;
 }
 
@@ -460,7 +585,7 @@ body {
     font-size: 1rem;
     border: none;
     cursor: pointer;
-    transition: .5s;
+    transition: 1s;
 }
 
 .card-footer .btn-calendar:hover {
@@ -469,61 +594,9 @@ body {
 }
 
 .acara .acara-footer {
-    margin-top: 15px;
+    margin-top: 1.5rem;
     color: var(--text-color);
     font-size: 1.2rem;
-}
-
-.acara .acara-flower1 {
-    position: absolute;
-    width: 100%;
-    right: 150px;
-    top: -50px;
-    z-index: -1;
-}
-
-.acara .acara-flower1 img {
-    width: 400px;
-    height: 400px;
-}
-
-.acara .acara-flower2 {
-    position: absolute;
-    width: 100%;
-    right: 185px;
-    bottom: -60px;
-    z-index: -1;
-}
-
-.acara .acara-flower2 img {
-    width: 250px;
-    height: 250px;
-}
-
-.acara .acara-flower3 {
-    position: absolute;
-    width: 100%;
-    left: 150px;
-    bottom: -40px;
-    z-index: -1;
-}
-
-.acara .acara-flower3 img {
-    width: 300px;
-    height: 300px;
-}
-
-.acara .acara-flower4 {
-    position: absolute;
-    width: 100%;
-    left: 150px;
-    top: 50px;
-    z-index: -1;
-}
-
-.acara .acara-flower4 img {
-    width: 150px;
-    height: 250px;
 }
 
 /* lokasi css */
@@ -533,7 +606,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     background-image: url(assets/img/COVER.svg);
     background-size: cover;
     background-position: center;
@@ -542,17 +615,22 @@ body {
 }
 
 .lokasi .title,
-.gift .title {
+.gift .title,
+.doa .title {
     display: block;
     font-size: 4rem;
-    padding-top: 180px;
+    padding-top: 20rem;
     font-weight: 500;
-    margin-bottom: 20px;
     letter-spacing: 1.5px;
 }
 
+.map-information {
+    z-index: 100;
+}
 .lokasi iframe {
     border: solid 1px var(--text-color);
+    border-radius: 10px;
+    margin: 1rem auto;
 }
 
 .lokasi h3 {
@@ -570,7 +648,7 @@ body {
     color: var(--text-huruf-sambung);
     font-size: 1.2rem;
     box-shadow: var(--shadow);
-    z-index: 100;
+    transition: 1s;
 }
 
 .lokasi a:hover {
@@ -578,56 +656,26 @@ body {
     color: var(--white);
 }
 
-.lokasi .lokasi-flower1 {
+.lokasi .logo,
+.gift .logo,
+.doa .logo,
+.penutup .logo {
     position: absolute;
     width: 100%;
-    right: 150px;
-    top: -50px;
-    z-index: -1;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin-top: 12rem;
+    z-index: 1;
 }
 
-.lokasi .lokasi-flower1 img {
-    width: 400px;
-    height: 400px;
-}
-
-.lokasi .lokasi-flower2 {
-    position: absolute;
-    width: 100%;
-    right: 185px;
-    bottom: -60px;
-    z-index: -1;
-}
-
-.lokasi .lokasi-flower2 img {
-    width: 250px;
-    height: 250px;
-}
-
-.lokasi .lokasi-flower3 {
-    position: absolute;
-    width: 100%;
-    left: 150px;
-    bottom: -40px;
-    z-index: -1;
-}
-
-.lokasi .lokasi-flower3 img {
-    width: 300px;
-    height: 300px;
-}
-
-.lokasi .lokasi-flower4 {
-    position: absolute;
-    width: 100%;
-    left: 150px;
-    top: 50px;
-    z-index: -1;
-}
-
-.lokasi .lokasi-flower4 img {
-    width: 150px;
-    height: 250px;
+.lokasi .logo img,
+.gift .logo img,
+.doa .logo img,
+.penutup .logo img {
+    width: 7rem;
+    height: 7rem;
 }
 
 /* rsvp css */
@@ -637,20 +685,19 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-image: url(assets/img/QUOTE.svg);
+    height: auto;
+    background-image: url(assets/img/QUOTE-2.svg);
     background-size: cover;
     background-position: center;
     overflow: hidden;
-    z-index: 1;
 }
 
 .rsvp .title {
-    padding-top: 130px;
+    padding-top: 13rem;
     font-size: 3rem;
     font-weight: 500;
     letter-spacing: 10px;
-    margin: 20px auto;
+    margin: 2rem auto;
 }
 
 .rsvp h4 {
@@ -662,8 +709,8 @@ body {
     position: relative;
     width: 100%;
     max-width: 500px;
-    margin: 10px 0 10px 0;
-    padding: 10px;
+    margin: 1rem 0 1rem 0;
+    padding: 1rem;
 }
 
 .rsvp-container .form-label {
@@ -682,6 +729,7 @@ body {
     width: 6rem;
     letter-spacing: 1.5px;
     box-shadow: var(--shadow);
+    transition: 1s;
 }
 
 .rsvp-container button:hover {
@@ -694,11 +742,12 @@ body {
     margin: 0;
     padding: 0;
     border-radius: 10px;
-    width: 320px;
-    height: 170px;
+    width: 32rem;
+    height: 17rem;
     overflow-y: scroll;
-    background-color: rgba(228, 224, 211, .3);
+    background-color: rgba(228, 224, 211, .8);
     z-index: 2;
+    transition: .5s;
 }
 
 #rsvp-list {
@@ -706,18 +755,35 @@ body {
     display: block;
     list-style: none;
     color: var(--text-color);
-    margin: 10px auto;
+    margin: 1rem auto;
 }
 
 #rsvp-list li {
     text-align: left;
     border-radius: 5px;
     background-color: rgba(255, 2555, 255, .7);
-    width: 265px;
+    width: 26.5rem;
     height: 100%;
-    margin: 10px auto;
-    padding: 5px;
+    margin: 1rem auto;
+    padding: .5rem;
     letter-spacing: .5px;
+}
+
+.rsvp .opening-bottom2 img {
+    width: 100rem;
+    height: 27rem;
+    transform: rotateX(180deg);
+    transform: rotateZ(180deg);
+}
+
+.rsvp .opening-bottom2 {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: block;
+    top: -6.3rem;
+    right: 25rem;
+    z-index: 1;
 }
 
 /* gift css */
@@ -727,7 +793,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     background-image: url(assets/img/COVER.svg);
     background-size: cover;
     background-position: center;
@@ -739,20 +805,24 @@ body {
     display: inline-flex;
     flex-direction: column;
     color: var(--text-color);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     width: 100%;
-    max-width: 350px;
+    margin: 2rem auto;
+}
+
+#gift-card {
+    z-index: 100;
 }
 
 .btn-box {
     display: block;
     width: 50%; 
-    max-width: 300px; 
-    margin: 15px auto;
+    max-width: 30rem; 
+    margin: 1.5rem auto;
     background: var(--background-button);
     color: var(--text-huruf-sambung);
-    z-index: 2;
     box-shadow: var(--shadow);
+    transition: 1s;
 }
 
 .collapse {
@@ -770,30 +840,29 @@ body {
 .credit-card {
 	background: url(assets/img/card-background.png);
 	background-size: cover;
-	border-radius: 15px;
+	border-radius: 1.5rem;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-	padding: 20px;
-	width: 300px;
+	padding: 2rem;
+	width: 30rem;
 	color: var(--text-color);
 	position: absolute;
-    z-index: 2;
 }
 
 .card-logo {
-	width: 75px;
+	width: 7.5rem;
 	position: absolute;
-	top: 15px;
-	right: 15px;
+	top: 1.5rem;
+	right: 1.5rem;
 }
 
 .card-container {
 	display: flex;
 	align-items: center;
-	margin-top: 50px;
+	margin-top: 5rem;
 }
 
 #alamat {
-    margin-top: 20px;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
 }
@@ -801,7 +870,7 @@ body {
 #alamat .alamat {
     font-size: 1.1rem;
     color: var(--text-huruf-sambung);
-    margin-bottom: 5px;
+    margin-bottom: .5rem;
 }
 
 #alamat .card-number {
@@ -812,20 +881,20 @@ body {
 }
 
 .card-sim {
-	width: 30px;
-	margin-right: 10px;
+	width: 3rem;
+	margin-right: 1rem;
 }
 
 .card-number {
 	font-family: 'Courier New', Courier, monospace;
-	font-size: 22px;
+	font-size: 2.2rem;
 }
 
 .card-name {
 	font-family: 'Courier New', Courier, monospace;
-	font-size: 16px;
+	font-size: 1.6rem;
 	text-align: left;
-	margin-top: 10px;
+	margin-top: 1rem;
 }
 
 .copy-button {
@@ -834,15 +903,15 @@ body {
     width: auto;
     max-width: none;
     margin: 0;
-	top: 5px;
-	left: 15px;
+	top: .5rem;
+	left: 1.5rem;
 	background-color: white;
 	color: black;
 	border: none;
-	padding: 5px 10px;
-	border-radius: 5px;
+	padding: .5rem 1rem;
+	border-radius: .5rem;
 	cursor: pointer;
-	margin-top: 20px;
+	margin-top: 2rem;
 	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -850,6 +919,7 @@ body {
     position: absolute;
     display: block;
     width: 100%;
+    height: auto;
     bottom: 100px;
     z-index: 1;
 }
@@ -866,21 +936,12 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     background-image: url(assets/img/QUOTE.svg);
     background-size: cover;
     background-position: center;
     overflow: hidden;
-    z-index: -1;
-}
-
-.doa .title {
-    display: block;
-    font-size: 3.5rem;
-    margin-top: 210px;
-    font-weight: 500;
-    margin-bottom: 30px;
-    letter-spacing: 1.5px;
+    z-index: 1;
 }
 
 .doa .arab {
@@ -888,25 +949,28 @@ body {
     font-size: 2.3rem;
 }
 
+.doa .col-10 {
+    z-index: 2;
+}
+
 .doa p {
     display: inline-flex;
     flex-direction: column;
     color: var(--text-color);
     font-size: 1.4rem;
-    margin-top: 20px;
-    max-width: 100%;
-    width: 250px;
+    margin: 3rem auto;
 }
 
 .doa p span {
-    margin: 10px auto;
+    margin: 1rem auto;
 }
 
 .doa h3 {
-    margin-top: 25px;
+    margin-top: 2.5rem;
     color: var(--text-huruf-sambung);
     font-size: 1.5rem;
 }
+
 
 /* penutup section */
 .penutup {
@@ -915,25 +979,30 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     background-image: url(assets/img/COVER.svg);
     background-size: cover;
     background-position: center;
     overflow: hidden;
-    z-index: -1;
+    z-index: 1;
 }
 
 .penutup h4 {
     color: var(--text-color);
     font-size: 1.3rem;
+    font-weight: 600;
 }
 
 .penutup h4:nth-child(1) {
-    margin-top: 220px;
+    margin-top: 22rem;
 }
 
 .penutup h4:nth-child(3) {
-    margin: 15px auto;
+    margin: 2rem auto;
+}
+
+#nama-penutup {
+    margin: 1rem 0 3rem 0;
 }
 
 .penutup h3 {
@@ -943,20 +1012,35 @@ body {
 
 .penutup h2 {
     font-size: 4.3rem;
-    margin: 12px auto;
+    margin: 1.2px auto;
 }
 
 .penutup .keluarga {
     color: var(--text-color);
     font-size: 1.1rem;
     letter-spacing: 1px;
+    font-weight: bold;
 }
 
 .penutup h5 {
     color: var(--text-color);
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.4rem;
     margin-top: 5.5px;
+}
+
+.penutup .closed-flower img {
+    width: 40rem;
+    height: 50rem;
+    opacity: .3;
+}
+
+.penutup .closed-flower {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    right: .28rem;
+    top: 10.6rem;
 }
 
 
@@ -992,36 +1076,56 @@ body {
     }
 }
 
-/* @keyframes myFlower { 
-    0% {
-        transform: rotateZ(0deg);
-    }
-    25% {
-        transform: rotateZ(10deg);
-    }
-    50% {
-        transform: rotateZ(0deg);
-    }
-    75% {
-        transform: rotateZ(-20deg);
-    }
-    100% {
-        transform: rotateZ(0deg);
-    }
-} */
 
+@media (min-width: 471px) {
+    .custom-container {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
 
+  @media (max-width: 471px) {
+    .custom-container {
+      padding-left: 15px;
+      padding-right: 15px;
+      max-width: 100%;
+    }
+  }
 
+@media (max-width: 991px) {
+    html {
+    }
+}
 
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
 
-/* Responsive Design */
-@media (max-width: 451px) {
-    .container {
-        align-items: center;
-        max-width: 55%;
-        border-radius: 0;
-        box-shadow: none;
+    .mynavbar .nav-link {
+        text-align: center;
+    }
+}
+
+@media (max-width: 520px) {
+    html {
+        font-size: 62.5%;
+    }
+}
+
+@media (max-width: 462px) {
+    html {
+        font-size: 50%;
+    }
+
+    .costum-container {
+        width: 100%;
         display: flex;
         flex-direction: column;
     }
+}
+
+@media (max-width: 371px) {
+
 }
