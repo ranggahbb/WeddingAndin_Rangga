@@ -1097,6 +1097,8 @@ body {
     .custom-container {
       padding-left: 15px;
       padding-right: 15px;
+      padding-top: 15px;
+      padding-bottom: 20px;
       max-width: 100%;
     }
   }
@@ -1128,25 +1130,22 @@ body {
     }
 
     .costum-container {
-        
         max-width: 430px;
         width: 100%;
         display: flex;
         flex-direction: column;
     }
 
-    section {
-        padding: 2rem auto;
-    }
-
     .hero {
         min-height: calc(100vh - 100px);
-        display: flex;
-        flex-direction: column;
         padding-top: 2rem;
         padding-bottom: 2rem;
         position: relative; 
         overflow: hidden;
+    }
+
+    .navbar {
+        margin-top: 80px;
     }
 
     .quote {
