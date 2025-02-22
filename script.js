@@ -1,3 +1,4 @@
+console.log('script.js loaded');
 AOS.init();
 
 // const rootElement = document.querySelector(":root");
@@ -52,6 +53,26 @@ AOS.init();
 
 
 // navbar js
+document.addEventListener('DOMContentLoaded', function() {
+  const navbar = document.querySelector('.mynavbar');
+  const quoteSection = document.getElementById('quote');
+
+  console.log('Navbar:', navbar); // Periksa apakah navbar dipilih dengan benar
+  console.log('Quote Section:', quoteSection); // Periksa apakah quote section dipilih dengan benar
+
+  function toggleNavbar() {
+      console.log('scrollY:', window.scrollY); // Periksa posisi scroll
+      console.log('quoteSection.offsetTop:', quoteSection.offsetTop); // Periksa offsetTop
+      if (window.scrollY > quoteSection.offsetTop) {
+          navbar.style.top = "0px";
+      } else {
+          navbar.style.top = "-80px";
+      }
+  }
+
+  window.addEventListener('scroll', toggleNavbar);
+});
+
 const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
       link.addEventListener('click', () => {

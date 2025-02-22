@@ -19,404 +19,409 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
   <body>
-    <div class="container custom-container">
-      <!-- hero container -->
-     <section id="hero" class="hero custom-height">
-      <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-10 text-center">
-              <span class="flower1"><img src="assets/img/flower-animation/bunga1.svg" alt=""></span>
-              <span class="flower2"><img src="assets/img/flower-animation/bunga3.svg" alt=""></span>
-              <span class="flower3"><img src="assets/img/flower-animation/bunga2.svg" alt=""></span>
-              <span class="dekorasi" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="2000"><img src="assets/img/flower-animation/dekorasi.svg" alt=""></span>
-              <span class="dekorasi2" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="2000"><img src="assets/img/flower-animation/dekorasi.svg" alt=""></span>
+    <div class="parallax-container">
+     <div class="parallax-background"></div>
+          <div class="parallax-content">
+            <div class="content-wrapper">
+                    <!-- hero container -->
+                    <section id="hero" class="hero">
+                      <div class="container">
+                          <div class="row justify-content-center">
+                            <div class="col-10 text-center">
+                              <span class="flower1"><img src="assets/img/flower-animation/bunga1.svg" alt=""></span>
+                              <span class="flower2"><img src="assets/img/flower-animation/bunga3.svg" alt=""></span>
+                              <span class="flower3"><img src="assets/img/flower-animation/bunga2.svg" alt=""></span>
+                              <span class="dekorasi" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="2000"><img src="assets/img/flower-animation/dekorasi.svg" alt=""></span>
+                              <span class="dekorasi2" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="2000"><img src="assets/img/flower-animation/dekorasi.svg" alt=""></span>
+                
+                              <div class="cover">
+                                <h4 data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="1500">THE WEDDING OF</h4>
+                                <h1 class="huruf-sambung" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="1500">Andin<br>&<br>Rangga</h1>
+                                <h5 data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="1500">Kepada Yth,<br><span>Bapak/Ibu/Saudara/i</span></h5>
+                                <a href="#quote" class="btn btn-xs rounded-pill btn-main" onclick="enableScroll()"><i class="bi bi-envelope-heart-fill"></i>  Buka Undangan</a>
+                              </div> 
+                            </div>  
+                          </div> 
+                      </div>
+                    </section>
 
-              <div class="cover">
-                <h4 data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="1500">THE WEDDING OF</h4>
-                <h1 class="huruf-sambung" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="1500">Andin<br>&<br>Rangga</h1>
-                <h5 data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="1500">Kepada Yth,<br><span>Bapak/Ibu/Saudara/i</span></h5>
-                <a href="#quote" class="btn btn-xs rounded-pill btn-main" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500" onclick="enableScroll()"><i class="bi bi-envelope-heart-fill"></i>  Buka Undangan</a>
-              </div> 
-            </div>  
-          </div> 
-      </div>
-     </section>
-
-     <!-- navbar -->
-     <nav class="navbar bg-body-transparent sticky-top mynavbar">
-      <div class="container">
-        <a class="navbar-brand huruf-sambung" href="#">A & R</a>
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title huruf-sambung" id="offcanvasNavbarLabel">Andin ❤️ Rangga</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <div class="navbar-nav">
-              <a href="#quote" class="nav-link" id="quoteLink">Kutipan</a>
-              <a href="#opening" class="nav-link" id="openingLink">Pembukaan</a>
-              <a href="#acara" class="nav-link" id="acaraLink">Acara</a>
-              <a href="#lokasi" class="nav-link" id="lokasiLink">Lokasi</a>
-              <a href="#rsvp" class="nav-link" id="rsvpLink">RSVP</a>
-              <a href="#gift" class="nav-link" id="giftLink">Hadiah</a>
-              <a href="#doa" class="nav-link" id="doaLink">Do'a</a>
-              <a href="#penutup" class="nav-link" id="penutupLink">Penutup</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-     
-     <!-- quote section -->
-     <section id="quote" class="quote custom-height">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-12 text-center">
-              <span class="quote-flower1" data-aos="zoom-in-right" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/flower-animation/flower-quotes1.svg" alt=""></span>
-              <span class="quote-flower2" data-aos="zoom-in-right" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/flower-animation/flower-quotes2.svg" alt=""></span>
-              <span class="quote-flower3" data-aos="zoom-in-left" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/flower-animation/flower-quotes3.svg" alt=""></span>
-              <span class="quote-flower4" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/flower-animation/flower-quotes4.svg" alt=""></span>
-              <span class="logo" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/icon-2.svg" alt=""></span>
-              <span class="footer-section" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500"><img src="assets/img/footer.svg" alt=""></span>
-            </div>
-            <div class="col-8 text-center justify-content-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-              <p>
-                Dan di antara tanda - tanda (kebesaran)-Nya ialah Dia menciptakan 
-                pasangan - pasangan untukmu dari jenismu sendiri, agar kamu cenderung
-                & merasa tentram kepadanya, & Dia menjadikan di antaramu rasa kasih
-                dan sayang. Sungguh, pada yang demikian itu benar- benar terdapat
-                tanda - tanda (kebesaran Allah) bagi kaum yang berpikir.
-              </p>
-              <h4>Q.S. Ar-Rum: 21</h4>
-          </div>
-          </div>
-        </div>
-     </section>
-
-     <!-- opening section -->
-      <section id="opening" class="opening" >
-        <div class="container"></div> 
-          <div class="row justify-content-center">
-            <div class="col-12 text-center justify-content-center image-container">
-              <span class="opening-bottom" ><img src="assets/img/flower-animation/flower-bottom.svg" alt=""></span>
-              <span class="opening-flower2" ><img src="assets/img/flower-animation/opening-flower.svg" alt=""></span>
-              <span class="opening-flower3" ><img src="assets/img/flower-animation/opening-flower.svg" alt=""></span>
-              <span class="opening-flower4" ><img src="assets/img/flower-animation/opening-flower4.svg" alt=""></span>
-              <span class="opening-flower5" ><img src="assets/img/flower-animation/opening-flower5.svg" alt=""></span>
-              <span class="opening-gate" ><img src="assets/img/flower-animation/opening-gate.svg" alt=""></span>
-              <span class="footer-section" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500"><img src="assets/img/footer.svg" alt=""></span>
-            </div>
-
-            <div class="col-8 text-center">
-              <h3 class="salam">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيْمِ</h3>
-              <h4>Assalamu'alaikum Warrahmatullahi Wabarakatuh</h4>
-              <p>
-                Tanpa mengurangi rasa hormat, kami bermaksud mengundang 
-                <span>Bapak/Ibu/Saudara/Saudari</span> pada acara resepsi pernikahan kami.
-              </p>
-              <h1 class="huruf-sambung">Andini Julistyandhari</h1>
-              <h5 class="huruf-sambung">dengan</h5>
-              <h1 class="huruf-sambung">M. Rangga Habibie M.</h1>
-            </div>
-          </div>
-      </section>
-
-      <!-- acara section -->
-       <section id="acara" class="acara custom-height">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-12 text-center">
-              <span class="acara-flower1" data-aos="zoom-in-right" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/flower-animation/flower-quotes1.svg" alt=""></span>
-              <span class="acara-flower2" data-aos="zoom-in-right" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/flower-animation/flower-quotes2.svg" alt=""></span>
-              <span class="acara-flower3" data-aos="zoom-in-left" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/flower-animation/flower-quotes3.svg" alt=""></span>
-              <span class="acara-flower4" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/flower-animation/flower-quotes4.svg" alt=""></span>
-              <span class="logo" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/icon-2.svg" alt=""></span>
-              <span class="footer-section" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500"><img src="assets/img/footer.svg" alt=""></span>
-            </div>
-
-            <div class="col-12 text-center">
-              <h2 class="title huruf-sambung" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">Acara</h2>
-            </div>
-          </div>
-          <div class="isi-acara row justify-content-center mt-4">
-            <div class="col-xs-6 col-5" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
-              <div class="text-center mb-4">
-                <div class="card-header huruf-sambung">
-                  Akad Nikah
-                </div>
-                <div class="row justify-content-center">
-                  <div class="col-xs-10 col-10"> 
-                    <div class="card-body">
-                      <span class="date"><i class="bi bi-calendar-event"></i> Jum'at, 11 Juli 2025</span>
-                      <span class="clock"><i class="bi bi-clock"></i> 09.00 - 11.00</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  Acara hanya dihadiri oleh keluarga dan kerabat terdekat
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-6 col-5" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
-              <div class="text-center mb-4">
-                <div class="card-header huruf-sambung">
-                  Tasyakuran
-                </div>
-                <div class="row justify-content-center">
-                  <div class="col-xs-10 col-10"> 
-                    <div class="card-body">
-                      <span class="date"><i class="bi bi-calendar-event"></i> Sabtu, 12 Juli 2025</span>
-                      <span class="clock"><i class="bi bi-clock"></i> 11.00 - 15.00</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  Tamarin Nurseries Garden & Cafe
-                  <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Wedding+of+Andin+❤️+Rangga&dates=20250712T110000/20250712T150000&details=''&location=Tamarin+Nurseries+Garden+and+Cafe" target="_blank" rel="noopener noreferrer" class="btn btn-lg mt-3 rounded-pill btn-calendar">
-                    Tambahkan ke Google Calendar
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-xs-10 col-8 text-center">
-              <h2 class="acara-footer" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">“Sebaik - baik rasa cinta adalah 
-                yang dibangun dengan 
-                mencintai karena Allah”
-              </h2>
-            </div>
-          </div>
-        </div> 
-       </section>
-      
-      <!-- lokasi section -->
-       <section id="lokasi" class="lokasi custom-height">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-12 text-center">
-              <span class="lokasi-flower1" data-aos="zoom-in-right" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/flower-animation/flower-quotes1.svg" alt=""></span>
-              <span class="lokasi-flower2" data-aos="zoom-in-right" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/flower-animation/flower-quotes2.svg" alt=""></span>
-              <span class="lokasi-flower3" data-aos="zoom-in-left" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/flower-animation/flower-quotes3.svg" alt=""></span>
-              <span class="lokasi-flower4" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/flower-animation/flower-quotes4.svg" alt=""></span>
-              <span class="logo" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/icon-2.svg" alt=""></span>
-              <span class="footer-section" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500"><img src="assets/img/footer.svg" alt=""></span>
-            </div>
-
-            <div class="col-8 text-center">
-              <h2 class="title huruf-sambung" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">Lokasi Acara</h2>
-              <div class="row justify-content-center align-items-center">
-                <div class="col-xs-8 col-12 text-center map-information">
-                  <iframe data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1500" class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1180202603455!2d106.74387217453156!3d-6.248175361177889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f092d71129ab%3A0x5722837cd22ca824!2sTamarin%20Nurseries%20Garden%20%26%20Cafe!5e0!3m2!1sid!2sid!4v1735613125081!5m2!1sid!2sid" width="100%" height="150" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                  <h3 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">Tamarin Nurseries Garden & Cafe</h3>
-                  <p data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">Jl. Manggala No.161, RT.007/RW.007, Deplu, Cipadu Jaya, Kec. Larangan, Kota Tangerang</p>
-                  <a data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" href="https://maps.app.goo.gl/ZRvD9Db7goj7AXpVA" target="_blank" class="btn btn-lg rounded-pill m-3">
-                    <i class="bi bi-map"></i> Petunjuk Lokasi
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-       </section>
-      
-      <!-- rsvp section -->
-       <section id="rsvp" class="rsvp custom-height">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-12 text-center">
-              <span class="opening-bottom" ><img src="assets/img/flower-animation/flower-bottom.svg" alt=""></span>
-              <span class="opening-bottom2" ><img src="assets/img/flower-animation/flower-bottom.svg" alt=""></span>
-            </div>
-            
-            <div class="col-10 text-center" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1500">
-              <h2 class="title huruf-sambung">RSVP</h2>
-              <div class="col-xs-8 justify-content-center text-center">
-                <h4>Kirim ucapan untuk mempelai dan konfirmasi kehadiran</h4>
-              </div>
-              <div class="rsvp-container">
-                <form id="my-form" class="row row-cols-xs-auto g-3 align-items-center" action="https://sheetdb.io/api/v1/4rrxsy7lhwl4x" method="POST">
-                  <div class="col-6">
-                    <div class="mb-3">
-                      <label for="nama" class="form-label">Nama</label>
-                      <input type="text" class="form-control" id="nama" name="nama" required>
-                    </div>
-                  </div>
-                  <div class="col-4">
-                    <div class="mb-3">
-                      <label for="kehadiran" class="form-label">Kehadiran</label>
-                      <select name="kehadiran" id="kehadiran" class="form-select" required>
-                        <option selected>Pilih salah satu</option>
-                        <option value="Hadir">Hadir</option>
-                        <option value="Tidak Hadir">Tidak Hadir</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-2">
-                    <div class="mb-3">
-                      <label for="jumlah" class="form-label">Presensi</label>
-                      <input type="number" class="form-control" id="jumlah" name="jumlah" min="0" max="5" length="1" value="0" required>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="mb-2 d-block">
-                      <label for="ucapan" class="form-label">Ucapan untuk Mempelai:</label><br>
-                      <textarea id="ucapan" name="ucapan" rows="3" class="form-control" required></textarea>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <button class="btn btn-md rounded-pill" type="submit">Kirim</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-            <div id="rsvp-display" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1500">
-              <ul id="rsvp-list">
-
-              </ul>
-            </div>
-          </div>
-       </section>
-
-      <!-- gift section -->
-      <section id="gift" class="gift custom-height">
-        <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-12 text-center">
-                <span class="gift-flower1"><img src="assets/img/flower-animation/flower-quotes1.svg" alt=""></span>
-                <span class="gift-flower2"><img src="assets/img/flower-animation/flower-quotes2.svg" alt=""></span>
-                <span class="gift-flower3"><img src="assets/img/flower-animation/flower-quotes3.svg" alt=""></span>
-                <span class="gift-flower4"><img src="assets/img/flower-animation/flower-quotes4.svg" alt=""></span>
-                <span class="logo" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/icon-2.svg" alt=""></span>
-                <span class="footer-section" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500"><img src="assets/img/footer.svg" alt=""></span>
-              </div>
-
-              <div class="col-8 text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-                    <h2 class="title huruf-sambung">Kirim Hadiah</h2>
-                    <p>Doa Restu Anda merupakan karunia yang sangat berarti bagi kami. <br>
-                       Namun jika Anda ingin memberikan hadiah kami sediakan fitur berikut
-                    </p>
-              </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <div id="gift-card" class="col-12 text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-                    <button id="btnRekening" type="button" class="text-center btn btn-lg rounded-pill btn-box" data-bs-toggle="collapse" data-bs-target="#collapseHadiah">Rekening</button>
-                    <div id="collapseHadiah" class="collapse">
-                        <div class="my-4 mx-auto position-relative credit-card">
-                            <img src="/assets/img/Logo-BCA-PNG.png" alt="Logo BCA" class="card-logo">
-                            <div class="card-container">
-                                <img src="/assets/img/sim.png" alt="sim" class="card-sim">
-                                <div class="card-number">1234 567 890</div>
+                    <!-- navbar -->
+                    <nav class="navbar bg-body-transparent mynavbar">
+                      <div class="container">
+                        <a class="navbar-brand huruf-sambung" href="#">A & R</a>
+                        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                          <div class="offcanvas-header">
+                            <h5 class="offcanvas-title huruf-sambung" id="offcanvasNavbarLabel">Andin ❤️ Rangga</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                          </div>
+                          <div class="offcanvas-body">
+                            <div class="navbar-nav">
+                              <a href="#quote" class="nav-link" id="quoteLink">Kutipan</a>
+                              <a href="#opening" class="nav-link" id="openingLink">Pembukaan</a>
+                              <a href="#acara" class="nav-link" id="acaraLink">Acara</a>
+                              <a href="#lokasi" class="nav-link" id="lokasiLink">Lokasi</a>
+                              <a href="#rsvp" class="nav-link" id="rsvpLink">RSVP</a>
+                              <a href="#gift" class="nav-link" id="giftLink">Hadiah</a>
+                              <a href="#doa" class="nav-link" id="doaLink">Do'a</a>
+                              <a href="#penutup" class="nav-link" id="penutupLink">Penutup</a>
                             </div>
-                            <div class="card-name mt-2">Andini Julistyandhari</div>
-                            <a style="cursor: pointer;" onclick="copyText(this, event)" class="copy-button btn btn-light mt-3">
-                                <i class="bi bi-copy"></i> Copy
-                            </a>
+                          </div>
                         </div>
-                    </div>
-                    <button id="btnAlamat" type="button" class="text-center btn btn-lg rounded-pill btn-box" data-bs-toggle="collapse" data-bs-target="#collapseAlamat">Alamat</button>
-                    <div id="collapseAlamat" class="collapse">
-                        <div class="my-4 mx-auto position-relative credit-card">
-                            <div class="card-container" id="alamat">
-                                <span class="alamat">Alamat Pengiriman</span>
-                                <div class="card-number">Arinda Permai 2, Jalan Cendana Blok A2 No. 2, Pondok Aren, Tangerang Selatan, Banten 15220</div>
-                            </div>
-                            <div class="card-name mt-2">Andini Julistyandhari</div>
-                            <a style="cursor: pointer;" onclick="copyText(this, event)" class="copy-button btn btn-light mt-3">
-                                <i class="bi bi-copy"></i> Copy
-                            </a>
+                      </div>
+                    </nav>
+
+                    <!-- quote section -->
+                    <section id="quote" class="quote custom-height">
+                      <div class="container">
+                        <div class="row justify-content-center">
+                          <div class="col-12 text-center">
+                            <span class="quote-flower1" data-aos="zoom-in-right" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/flower-animation/flower-quotes1.svg" alt=""></span>
+                            <span class="quote-flower2" data-aos="zoom-in-right" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/flower-animation/flower-quotes2.svg" alt=""></span>
+                            <span class="quote-flower3" data-aos="zoom-in-left" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/flower-animation/flower-quotes3.svg" alt=""></span>
+                            <span class="quote-flower4" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/flower-animation/flower-quotes4.svg" alt=""></span>
+                            <span class="logo" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/icon-2.svg" alt=""></span>
+                            <span class="footer-section" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500"><img src="assets/img/footer.svg" alt=""></span>
+                          </div>
+                          <div class="col-8 text-center justify-content-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                            <p>
+                              Dan di antara tanda - tanda (kebesaran)-Nya ialah Dia menciptakan 
+                              pasangan - pasangan untukmu dari jenismu sendiri, agar kamu cenderung
+                              & merasa tentram kepadanya, & Dia menjadikan di antaramu rasa kasih
+                              dan sayang. Sungguh, pada yang demikian itu benar- benar terdapat
+                              tanda - tanda (kebesaran Allah) bagi kaum yang berpikir.
+                            </p>
+                            <h4>Q.S. Ar-Rum: 21</h4>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </section>
-  
-     <!-- doa section -->
-     <section id="doa" class="doa custom-height">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 text-center">
-                <span class="doa-flower1"><img src="assets/img/flower-animation/flower-quotes1.svg" alt=""></span>
-                <span class="doa-flower2"><img src="assets/img/flower-animation/flower-quotes2.svg" alt=""></span>
-                <span class="doa-flower3"><img src="assets/img/flower-animation/flower-quotes3.svg" alt=""></span>
-                <span class="doa-flower4"><img src="assets/img/flower-animation/flower-quotes4.svg" alt=""></span>
-                <span class="logo" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/icon-2.svg" alt=""></span>
-                <span class="footer-section" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500"><img src="assets/img/footer.svg" alt=""></span>
-          </div>
-
-          <div class="col-10 text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-            <h2 class="title huruf-sambung">Do'a untuk Pengantin</h2>
-            <span class="arab">‎بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</span>
-          </div>
-
-          <div class="col-8 text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-            <p>“Barakallahu laka wabaaroka 
-              ‘alaika wajama’a 
-              bainakumaa fii khoirin.” <span></span>
-              "Semoga Allah
-              memberkahi di waktu
-              bahagia &amp; memberkahimu
-              di waktu susah, dan
-              mengumpulkan kalian
-              berdua dalam kebaikan"
-            </p>  
-            <h3>- HR. Abu Daud -</h3>                   
-          </div>
-        </div>
-      </div>
-     </section>
-
-     <!-- penutup section -->
-      <section id="penutup" class="penutup custom-height">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-12 text-center justify-content-center">
-              <span class="closed-flower"><img src="assets/img/flower-animation/closed-flower.svg" alt=""></span>
-              <span class="opening-bottom"><img src="assets/img/flower-animation/flower-bottom.svg" alt=""></span>
-              <span class="logo" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/icon-2.svg" alt=""></span>
-            </div>
-
-            <div class="col-sl-10 col-10 text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-              <h4>Atas kehadiran dan do’a restu kami ucapkan,</h4>
-              <h4>Jazaakumullah khairan wa baarakallaah fiikum</h4>
-              <h4>Wassalamu’alaikum Warrahmatullahi Wabarakatuh</h4>
-            </div>
-          </div>
-          <div id="nama-penutup" class="row justify-content-center align-items-center">
-            <div class="col-8 text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-              <h3>Kami Yang Berbahagia,</h3>
-              <h2 class="huruf-sambung">Andin & Rangga</h2>
-            </div>
-          </div>
-          <div class="row justify-content-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-            <div class="col-8 text-center">
-              <span class="keluarga">Keluarga Besar Mempelai Wanita:</span>
-              <h5>Bapak Gunadi<br>Ibu Maya Savitrie</h5>
-            </div>
-            <div class="col-8 text-center">
-              <span class="keluarga">Keluarga Besar Mempelai Pria:</span>
-              <h5>Bapak M. Bambang Mustofa<br>Ibu Ina Sutiana</h5>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-       <div id="audio-container">
-        <audio id="bgm" autoplay loop>
-          <source src="assets/audio/wedding.mp3" type="audio/mp3">
-        </audio>
-
-        <div class="audio-icon-wrapper" style="display: none;">
-          <i class="bi bi-disc-fill"></i>
-        </div>
-       </div>
-    </div>
+                        </div>
+                      </div>
+                    </section>
     
+                    <!-- opening section -->
+                    <section id="opening" class="opening" >
+                      <div class="container"></div> 
+                        <div class="row justify-content-center">
+                          <div class="col-12 text-center justify-content-center image-container">
+                            <span class="opening-bottom" ><img src="assets/img/flower-animation/flower-bottom.svg" alt=""></span>
+                            <span class="opening-flower2" ><img src="assets/img/flower-animation/opening-flower.svg" alt=""></span>
+                            <span class="opening-flower3" ><img src="assets/img/flower-animation/opening-flower.svg" alt=""></span>
+                            <span class="opening-flower4" ><img src="assets/img/flower-animation/opening-flower4.svg" alt=""></span>
+                            <span class="opening-flower5" ><img src="assets/img/flower-animation/opening-flower5.svg" alt=""></span>
+                            <span class="opening-gate" ><img src="assets/img/flower-animation/opening-gate.svg" alt=""></span>
+                            <span class="footer-section" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500"><img src="assets/img/footer.svg" alt=""></span>
+                          </div>
+              
+                          <div class="col-8 text-center">
+                            <h3 class="salam">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيْمِ</h3>
+                            <h4>Assalamu'alaikum Warrahmatullahi Wabarakatuh</h4>
+                            <p>
+                              Tanpa mengurangi rasa hormat, kami bermaksud mengundang 
+                              <span>Bapak/Ibu/Saudara/Saudari</span> pada acara resepsi pernikahan kami.
+                            </p>
+                            <h1 class="huruf-sambung">Andini Julistyandhari</h1>
+                            <h5 class="huruf-sambung">dengan</h5>
+                            <h1 class="huruf-sambung">M. Rangga Habibie M.</h1>
+                          </div>
+                        </div>
+                    </section>
+          
+                    <!-- acara section -->
+                    <section id="acara" class="acara custom-height">
+                      <div class="container">
+                        <div class="row justify-content-center">
+                          <div class="col-12 text-center">
+                            <span class="acara-flower1" data-aos="zoom-in-right" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/flower-animation/flower-quotes1.svg" alt=""></span>
+                            <span class="acara-flower2" data-aos="zoom-in-right" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/flower-animation/flower-quotes2.svg" alt=""></span>
+                            <span class="acara-flower3" data-aos="zoom-in-left" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/flower-animation/flower-quotes3.svg" alt=""></span>
+                            <span class="acara-flower4" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/flower-animation/flower-quotes4.svg" alt=""></span>
+                            <span class="logo" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/icon-2.svg" alt=""></span>
+                            <span class="footer-section" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500"><img src="assets/img/footer.svg" alt=""></span>
+                          </div>
+              
+                          <div class="col-10 text-center">
+                            <h2 class="title huruf-sambung" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">Acara</h2>
+                          </div>
+                        </div>
+                        <div class="isi-acara row justify-content-center mt-4">
+                          <div class="col-xs-6 col-5" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+                            <div class="text-center mb-4">
+                              <div class="card-header huruf-sambung">
+                                Akad Nikah
+                              </div>
+                              <div class="row justify-content-center">
+                                <div class="col-xs-10 col-10"> 
+                                  <div class="card-body">
+                                    <span class="date"><i class="bi bi-calendar-event"></i> Jum'at, 11 Juli 2025</span>
+                                    <span class="clock"><i class="bi bi-clock"></i> 09.00 - 11.00</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-footer">
+                                Acara hanya dihadiri oleh keluarga dan kerabat terdekat
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xs-6 col-5" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+                            <div class="text-center mb-4">
+                              <div class="card-header huruf-sambung">
+                                Tasyakuran
+                              </div>
+                              <div class="row justify-content-center">
+                                <div class="col-xs-10 col-10"> 
+                                  <div class="card-body">
+                                    <span class="date"><i class="bi bi-calendar-event"></i> Sabtu, 12 Juli 2025</span>
+                                    <span class="clock"><i class="bi bi-clock"></i> 11.00 - 15.00</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-footer">
+                                Tamarin Nurseries Garden & Cafe
+                                <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Wedding+of+Andin+❤️+Rangga&dates=20250712T110000/20250712T150000&details=''&location=Tamarin+Nurseries+Garden+and+Cafe" target="_blank" rel="noopener noreferrer" class="btn btn-lg mt-3 rounded-pill btn-calendar">
+                                  Tambahkan ke Google Calendar
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row justify-content-center">
+                          <div class="col-8 text-center">
+                            <h2 class="acara-footer" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">“Sebaik - baik rasa cinta adalah 
+                              yang dibangun dengan 
+                              mencintai karena Allah”
+                            </h2>
+                          </div>
+                        </div>
+                      </div> 
+                    </section>
+       
+                    <!-- lokasi section -->
+                    <section id="lokasi" class="lokasi custom-height">
+                      <div class="container">
+                        <div class="row justify-content-center">
+                          <div class="col-12 text-center">
+                            <span class="lokasi-flower1" data-aos="zoom-in-right" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/flower-animation/flower-quotes1.svg" alt=""></span>
+                            <span class="lokasi-flower2" data-aos="zoom-in-right" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/flower-animation/flower-quotes2.svg" alt=""></span>
+                            <span class="lokasi-flower3" data-aos="zoom-in-left" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/flower-animation/flower-quotes3.svg" alt=""></span>
+                            <span class="lokasi-flower4" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/flower-animation/flower-quotes4.svg" alt=""></span>
+                            <span class="logo" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/icon-2.svg" alt=""></span>
+                            <span class="footer-section" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500"><img src="assets/img/footer.svg" alt=""></span>
+                          </div>
+              
+                          <div class="col-8 text-center">
+                            <h2 class="title huruf-sambung" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">Lokasi Acara</h2>
+                            <div class="row justify-content-center align-items-center">
+                              <div class="co-10 text-center map-information">
+                                <iframe data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1500" class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1180202603455!2d106.74387217453156!3d-6.248175361177889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f092d71129ab%3A0x5722837cd22ca824!2sTamarin%20Nurseries%20Garden%20%26%20Cafe!5e0!3m2!1sid!2sid!4v1735613125081!5m2!1sid!2sid" width="100%" height="150" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <h3 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">Tamarin Nurseries Garden & Cafe</h3>
+                                <p data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">Jl. Manggala No.161, RT.007/RW.007, Deplu, Cipadu Jaya, Kec. Larangan, Kota Tangerang</p>
+                                <a data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" href="https://maps.app.goo.gl/ZRvD9Db7goj7AXpVA" target="_blank" class="btn btn-lg rounded-pill m-3">
+                                  <i class="bi bi-map"></i> Petunjuk Lokasi
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+      
+                    <!-- rsvp section -->
+                    <section id="rsvp" class="rsvp custom-height">
+                      <div class="container">
+                        <div class="row justify-content-center">
+                          <div class="col-12 text-center">
+                            <span class="opening-bottom"><img src="assets/img/flower-animation/flower-bottom.svg" alt=""></span>
+                            <span class="opening-bottom2"><img src="assets/img/flower-animation/flower-bottom.svg" alt=""></span>
+                          </div>
+                          
+                          <div class="col-10 text-center" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1500">
+                            <h2 class="title huruf-sambung">RSVP</h2>
+                            <div class="row justify-content-center text-center">
+                              <h4>Kirim ucapan untuk mempelai dan konfirmasi kehadiran</h4>
+                            </div>
+                            <div class="rsvp-container">
+                              <form id="my-form" class="row row-cols-xs-auto g-3 align-items-center" action="https://sheetdb.io/api/v1/4rrxsy7lhwl4x" method="POST">
+                                <div class="col-6">
+                                  <div class="mb-3">
+                                    <label for="nama" class="form-label">Nama</label>
+                                    <input type="text" class="form-control" id="nama" name="nama" required>
+                                  </div>
+                                </div>
+                                <div class="col-4">
+                                  <div class="mb-3">
+                                    <label for="kehadiran" class="form-label">Kehadiran</label>
+                                    <select name="kehadiran" id="kehadiran" class="form-select" required>
+                                      <option selected>Pilih salah satu</option>
+                                      <option value="Hadir">Hadir</option>
+                                      <option value="Tidak Hadir">Tidak Hadir</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-2">
+                                  <div class="mb-3">
+                                    <label for="jumlah" class="form-label">Presensi</label>
+                                    <input type="number" class="form-control" id="jumlah" name="jumlah" min="0" max="5" length="1" value="0" required>
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="mb-2 d-block">
+                                    <label for="ucapan" class="form-label">Ucapan untuk Mempelai:</label><br>
+                                    <textarea id="ucapan" name="ucapan" rows="3" class="form-control" required></textarea>
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <button class="btn btn-md rounded-pill" type="submit">Kirim</button>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                          <div id="rsvp-display" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1500">
+                            <ul id="rsvp-list">
+              
+                            </ul>
+                          </div>
+                        </div>
+                    </section>
+  
+                    <!-- gift section -->
+                    <section id="gift" class="gift custom-height">
+                      <div class="container">
+                          <div class="row justify-content-center">
+                            <div class="col-12 text-center">
+                              <span class="gift-flower1"><img src="assets/img/flower-animation/flower-quotes1.svg" alt=""></span>
+                              <span class="gift-flower2"><img src="assets/img/flower-animation/flower-quotes2.svg" alt=""></span>
+                              <span class="gift-flower3"><img src="assets/img/flower-animation/flower-quotes3.svg" alt=""></span>
+                              <span class="gift-flower4"><img src="assets/img/flower-animation/flower-quotes4.svg" alt=""></span>
+                              <span class="logo" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/icon-2.svg" alt=""></span>
+                              <span class="footer-section" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500"><img src="assets/img/footer.svg" alt=""></span>
+                            </div>
+              
+                            <div class="col-10 text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                                  <h2 class="title huruf-sambung">Kirim Hadiah</h2>
+                                  <p>Doa Restu Anda merupakan karunia yang sangat berarti bagi kami. <br>
+                                    Namun jika Anda ingin memberikan hadiah kami sediakan fitur berikut
+                                  </p>
+                            </div>
+                          </div>
+              
+                          <div class="row justify-content-center">
+                              <div id="gift-card" class="col-12 text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                                  <button id="btnRekening" type="button" class="text-center btn btn-lg rounded-pill btn-box" data-bs-toggle="collapse" data-bs-target="#collapseHadiah">Rekening</button>
+                                  <div id="collapseHadiah" class="collapse">
+                                      <div class="my-4 mx-auto position-relative credit-card">
+                                          <img src="/assets/img/Logo-BCA-PNG.png" alt="Logo BCA" class="card-logo">
+                                          <div class="card-container">
+                                              <img src="/assets/img/sim.png" alt="sim" class="card-sim">
+                                              <div class="card-number">1234 567 890</div>
+                                          </div>
+                                          <div class="card-name mt-2">Andini Julistyandhari</div>
+                                          <a style="cursor: pointer;" onclick="copyText(this, event)" class="copy-button btn btn-light mt-3">
+                                              <i class="bi bi-copy"></i> Copy
+                                          </a>
+                                      </div>
+                                  </div>
+                                  <button id="btnAlamat" type="button" class="text-center btn btn-lg rounded-pill btn-box" data-bs-toggle="collapse" data-bs-target="#collapseAlamat">Alamat</button>
+                                  <div id="collapseAlamat" class="collapse">
+                                      <div class="my-4 mx-auto position-relative credit-card">
+                                          <div class="card-container" id="alamat">
+                                              <span class="alamat">Alamat Pengiriman</span>
+                                              <div class="card-number">Arinda Permai 2, Jalan Cendana Blok A2 No. 2, Pondok Aren, Tangerang Selatan, Banten 15220</div>
+                                          </div>
+                                          <div class="card-name mt-2">Andini Julistyandhari</div>
+                                          <a style="cursor: pointer;" onclick="copyText(this, event)" class="copy-button btn btn-light mt-3">
+                                              <i class="bi bi-copy"></i> Copy
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </section>
+            
+                    <!-- doa section -->
+                    <section id="doa" class="doa custom-height">
+                      <div class="container">
+                        <div class="row justify-content-center">
+                          <div class="col-12 text-center">
+                                <span class="doa-flower1"><img src="assets/img/flower-animation/flower-quotes1.svg" alt=""></span>
+                                <span class="doa-flower2"><img src="assets/img/flower-animation/flower-quotes2.svg" alt=""></span>
+                                <span class="doa-flower3"><img src="assets/img/flower-animation/flower-quotes3.svg" alt=""></span>
+                                <span class="doa-flower4"><img src="assets/img/flower-animation/flower-quotes4.svg" alt=""></span>
+                                <span class="logo" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/icon-2.svg" alt=""></span>
+                                <span class="footer-section" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500"><img src="assets/img/footer.svg" alt=""></span>
+                          </div>
+                
+                          <div class="col-10 text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                            <h2 class="title huruf-sambung">Do'a untuk Pengantin</h2>
+                            <span class="arab">‎بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</span>
+                          </div>
+                
+                          <div class="col-8 text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                            <p>“Barakallahu laka wabaaroka 
+                              ‘alaika wajama’a 
+                              bainakumaa fii khoirin.” <span></span>
+                              "Semoga Allah
+                              memberkahi di waktu
+                              bahagia &amp; memberkahimu
+                              di waktu susah, dan
+                              mengumpulkan kalian
+                              berdua dalam kebaikan"
+                            </p>  
+                            <h3>- HR. Abu Daud -</h3>                   
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+  
+                    <!-- penutup section -->
+                    <section id="penutup" class="penutup custom-height">
+                      <div class="container">
+                        <div class="row justify-content-center">
+                          <div class="col-12 text-center justify-content-center">
+                            <span class="closed-flower"><img src="assets/img/flower-animation/closed-flower.svg" alt=""></span>
+                            <span class="opening-bottom"><img src="assets/img/flower-animation/flower-bottom.svg" alt=""></span>
+                            <span class="logo" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000"><img src="assets/img/icon-2.svg" alt=""></span>
+                          </div>
+                
+                          <div class="col-10 text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                            <h4>Atas kehadiran dan do’a restu kami ucapkan,</h4>
+                            <h4>Jazaakumullah khairan wa baarakallaah fiikum</h4>
+                            <h4>Wassalamu’alaikum Warrahmatullahi Wabarakatuh</h4>
+                          </div>
+                        </div>
+                        <div id="nama-penutup" class="row justify-content-center align-items-center">
+                          <div class="col-8 text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                            <h3>Kami Yang Berbahagia,</h3>
+                            <h2 class="huruf-sambung">Andin & Rangga</h2>
+                          </div>
+                        </div>
+                        <div class="row justify-content-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                          <div class="col-8 text-center">
+                            <span class="keluarga">Keluarga Besar Mempelai Wanita:</span>
+                            <h5>Bapak Gunadi<br>Ibu Maya Savitrie</h5>
+                          </div>
+                          <div class="col-8 text-center">
+                            <span class="keluarga">Keluarga Besar Mempelai Pria:</span>
+                            <h5>Bapak M. Bambang Mustofa<br>Ibu Ina Sutiana</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+      
+                    <div id="audio-container">
+                      <audio id="bgm" autoplay loop>
+                        <source src="assets/audio/wedding.mp3" type="audio/mp3">
+                      </audio>
+
+                      <div class="audio-icon-wrapper" style="display: none;">
+                        <i class="bi bi-disc-fill"></i>
+                      </div>
+                    </div>
+            </div>
+          </div>
+    </div>
+        
    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
