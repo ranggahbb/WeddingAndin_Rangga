@@ -61,11 +61,10 @@ body {
 }
 
 .content-wrapper {
-    max-width: 451px;
+    width: min(451px, 100%);
     margin: 0 auto;
     box-sizing: border-box;
-    /* display: none; */
-    
+    /* display: none; */   
 }
 
 section {
@@ -101,55 +100,35 @@ section {
 
 .hero img {
     position: absolute;
-    width: 40rem;
-    height: auto;
-}
-
-.hero .flower1 {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    right: 21.5rem;
-    top: .5rem;
-    z-index: -1;
 }
 
 .hero .flower1 img {
     width: 25rem;
-    height: 35rem;
-    opacity: .9;
-}
-
-.hero .flower2 {
-    position: absolute;
-    width: 100%;
     height: auto;
-    right: 9rem;
-    top: 34rem;
+    right: 19rem;
+    top: 1rem;
+    opacity: .9;
     z-index: -1;
-    animation: myFlower linear 10s infinite;
 }
 
 .hero .flower2 img {
-    width: 36rem;
-    height: 38rem;
-    opacity: .9;
-}
-
-.hero .flower3 {
-    position: absolute;
-    width: 100%;
+    width: 30rem;
     height: auto;
-    left: 7rem;
-    top: 18.5rem;
-    z-index: -2;
+    left: 15rem;
+    top: 36rem;
     animation: myFlower linear 10s infinite;
+    opacity: .9;
+    z-index: -1;
 }
 
 .hero .flower3 img {
-    width: 17rem;
-    height: 34rem;
+    width: 18rem;
+    height: auto;
+    right: -1rem;
+    top: 24rem;
+    animation: myFlower linear 10s infinite;
     opacity: .9;
+    z-index: -2;
 }
 
 .hero .dekorasi {
