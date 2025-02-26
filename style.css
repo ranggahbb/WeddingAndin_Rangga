@@ -47,7 +47,7 @@ body {
     background-size: cover;
     background-position: center;
     transform: translateZ(-1px) scale(2);
-    z-index: -2;
+    z-index: -5;
 }
 
 .parallex-content {
@@ -57,14 +57,13 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -4;
 }
 
 .content-wrapper {
     width: min(451px, 100%);
     margin: 0 auto;
     box-sizing: border-box;
-    /* display: none; */   
 }
 
 section {
@@ -86,11 +85,6 @@ section {
 .hero {
     position: relative;
     min-height: 100vh;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
     background-image: url(assets/img/gerbang.svg);
     background-size: cover;
     background-position: center;
@@ -98,59 +92,77 @@ section {
     overflow: hidden;
 }
 
-.hero img {
+.hero .hero-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.hero .flower1 {
     position: absolute;
-}
-
-.hero .flower1 img {
-    width: 25rem;
-    height: auto;
-    right: 19rem;
-    top: 1rem;
-    opacity: .9;
+    top: -33%;
+    right: 41%;
     z-index: -1;
+    opacity: .9;
+}
+  
+.hero .flower1 img {
+    width: 100%;
+    max-width: 26rem;
+    height: auto;
 }
 
+.hero .flower2 {
+    position: absolute;
+    bottom: -40%;
+    right: 0;
+    z-index: -1;
+    opacity: .9;
+    animation: myFlower linear 10s infinite;
+}
+  
 .hero .flower2 img {
-    width: 30rem;
+    width: 100%;
+    max-width: 26rem;
     height: auto;
-    left: 15rem;
-    top: 36rem;
+}
+
+.hero .flower3 {
+    position: absolute;
+    right: -5%;
+    top: 22%;
+    z-index: -2;
     animation: myFlower linear 10s infinite;
     opacity: .9;
-    z-index: -1;
 }
 
 .hero .flower3 img {
-    width: 18rem;
+    width: 100%;
+    max-width: 18rem;
     height: auto;
-    right: -1rem;
-    top: 24rem;
-    animation: myFlower linear 10s infinite;
-    opacity: .9;
-    z-index: -2;
 }
 
 .hero .dekorasi {
     position: absolute;
-    width: 100%;
-    height: auto;
-    top: 29.5rem;
-    right: 13rem; 
+    top: 36%;
+    right: 53%; 
 }
 
 .hero .dekorasi2 {
     position: absolute;
-    width: 100%;
-    height: auto;
-    top: 29.5rem;
-    right: .5rem;
+    top: 36%;
+    right: 26%;
 }
 
 .hero .dekorasi img,
 .hero .dekorasi2 img {
-    width: 14rem;
-    height: 5rem;
+    width: 100%;
+    max-width: 9rem;
+    height: auto;
 }
 
 .hero .dekorasi2 img {
@@ -224,6 +236,10 @@ section {
     letter-spacing: 1.5px;
 }
 
+.offcanvas-title i {
+    font-size: 1.5rem;
+}
+
 .mynavbar a {
     font-weight: 400;
     color: var(--text-color);
@@ -242,24 +258,29 @@ section {
     position: relative;
     display: block;
     background-image: url(assets/img/background-1.svg);
-    min-height: 100vh;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
     background-size: cover;
     background-position: center;
     overflow: hidden;
     z-index: -1;
 }
 
+.quote .quote-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+    width: 100%;
+}
+
 .quote p {
-    margin-top: 27rem;
+    padding-top: 20rem;
     color: var(--text-color);
     text-wrap: wrap;
     font-size: 1.5rem;
     font-weight: 300;
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
     letter-spacing: 1px;
 }
 
@@ -270,15 +291,14 @@ section {
 }
 
 .quote .logo,
-.acara .logo {
+.opening .logo {
     position: absolute;
-    width: 100%;
-    height: auto;
+    display: block;
     justify-content: center;
     align-items: center;
-    display: block;
-    margin-top: 15rem;
+    top: 20%;
     z-index: 1;
+    border: solid 1px red
 }
 
 .quote .logo img,
@@ -288,123 +308,81 @@ section {
 .gift .logo img,
 .doa .logo img,
 .penutup .logo img {
-    width: 9rem;
-    height: 9rem;
+    width: 100%;
+    max-width: 9rem;
+    height: auto;
 }
 
-.quote .quote-flower1,
-.acara .acara-flower1,
-.lokasi .lokasi-flower1,
-.gift .gift-flower1,
-.doa .doa-flower1 {
+.quote .quote-flower1 {
     position: absolute;
-    width: 100%;
-    height: auto;
-    right: 15rem;
-    top: -5rem;
+    left: -20%;
+    top: -12%;
     z-index: -1;
+    border: solid 1px yellowgreen
 }
 
 .quote .quote-flower1 img,
-.acara .acara-flower1 img,
+.acara .quote-flower1 img,
 .lokasi .lokasi-flower1 img,
 .gift .gift-flower1 img,
 .doa .doa-flower1 img {
-    width: 40rem;
-    height: 40rem;
+    width: 100%;
+    max-width: 38rem;
+    height: auto;
 }
 
-.quote .quote-flower2,
-.acara .acara-flower2,
-.lokasi .lokasi-flower2,
-.gift .gift-flower2,
-.doa .doa-flower2 {
+.quote .quote-flower2 {
     position: absolute;
-    width: 100%;
-    height: auto;
-    right: 19rem;
-    top: 50rem;
+    left: -20%;
+    top: 80%;
     z-index: -1;
+    border: solid 1px yellowgreen
 }
 
 .quote .quote-flower2 img,
-.acara .acara-flower2 img,
+.acara .quote-flower2 img,
 .lokasi .lokasi-flower2 img,
 .gift .gift-flower2 img,
 .doa .doa-flower2 img {
-    width: 25rem;
-    height: 25rem;
+    width: 100%;
+    max-width: 25rem;
+    height: auto;
 }
 
-.quote .quote-flower3,
-.acara .acara-flower3,
-.lokasi .lokasi-flower3,
-.gift .gift-flower3,
-.doa .doa-flower3 {
+.quote .quote-flower3 {
     position: absolute;
-    width: 100%;
-    height: auto;
-    left: 15rem;
-    top: 37rem;
+    right: -27%;
+    top: 60%;
     z-index: -1;
+    border: solid 1px yellowgreen
 }
 
 .quote .quote-flower3 img,
-.acara .acara-flower3 img,
+.acara .quote-flower3 img,
 .lokasi .lokasi-flower3 img,
 .gift .gift-flower3 img,
-.doa .doa-flower3 img{
-    width: 40rem;
-    height: 35rem;
+.doa .doa-flower3 img {
+    width: 100%;
+    max-width: 40rem;
+    height: auto;
 }
 
-.quote .quote-flower4,
-.acara .acara-flower4,
-.lokasi .lokasi-flower4,
-.gift .gift-flower4,
-.doa .doa-flower4 {
+.quote .quote-flower4 {
     position: absolute;
-    width: 100%;
-    height: auto;
-    left: 15rem;
-    top: 4rem;
+    left: 70%;
+    top: 20%;
     z-index: -1;
+    border: solid 1px yellowgreen
 }
 
 .quote .quote-flower4 img,
-.acara .acara-flower4 img,
+.acara .quote-flower4 img,
 .lokasi .lokasi-flower4 img,
 .gift .gift-flower4 img,
 .doa .doa-flower4 img {
-    width: 15rem;
-    height: 25rem;
-}
-
-.quote .footer-section,
-.opening .footer-section,
-.acara .footer-section,
-.lokasi .footer-section,
-.gift .footer-section,
-.doa .footer-section {
-    position: absolute;
-    display: block;
     width: 100%;
+    max-width: 15rem;
     height: auto;
-    top: 54rem;
-    z-index: 1;
-    margin: 0;
-    padding: 0;
-    z-index: -1;
-}
-
-.quote .footer-section img,
-.opening .footer-section img,
-.acara .footer-section img,
-.lokasi .footer-section img,
-.gift .footer-section img,
-.doa .footer-section img {
-    width: 20rem;
-    height: 10rem;
 }
 
 /* opening css */
@@ -412,20 +390,25 @@ section {
 .opening {
     position: relative;
     min-height: 100vh;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
     background-image: url(assets/img/background-2.svg);
     background-size: cover;
     background-position: center;
     overflow: hidden;
-    z-index: -1;
+    z-index: -4;
 }
 
+.opening .opening-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
 
 .opening .col-8 {
-    margin-top: 14rem;
+    padding-top: 12rem;
     z-index: 100;
 }
 
@@ -443,13 +426,13 @@ section {
 }
 
 .opening p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: var(--text-color);
     font-weight: 500;
 }
 
 .opening h1 {
-    font-size: 4rem;
+    font-size: 3.9rem;
 }
 
 .opening h5 {
@@ -457,105 +440,86 @@ section {
 }
 
 .opening .logo {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-top: 3.5rem;
-    z-index: 1;
-}
-
-.opening .opening-bottom img,
-.rsvp .opening-bottom img,
-.penutup .opening-bottom img {
-    width: 100rem;
-    height: 32rem;
-    opacity: .9;
+    top: 0;
 }
 
 .opening .opening-bottom,
 .rsvp .opening-bottom,
 .penutup .opening-bottom {
     position: absolute;
-    width: 100%;
-    height: auto;
-    display: block;
-    top: 49rem;
-    right: 25rem;
-    z-index: -1;
+    top: 106%;
+    right: 0;
+    opacity: .9;
+    z-index: 1;
 }
 
-.opening .opening-flower2 img {
-    width: 18rem;
-    height: 45rem;
-    opacity: .8;
+.opening .opening-bottom img,
+.rsvp .opening-bottom img,
+.penutup .opening-bottom img {
+    width: 100%;
+    max-width: 60rem;
+    height: auto; 
 }
 
 .opening .opening-flower2 {
     position: absolute;
-    width: 100%;
-    height: auto;
-    display: block;
-    top: -4rem;
-    left: -15rem;
+    top: -15%;
+    left: -1%;
     z-index: 5;
+    opacity: .9;
 }
 
-.opening .opening-flower3 img {
-    width: 14rem;
-    height: 40rem;
-    transform: rotateY(180deg);
-    opacity: .8;
+.opening .opening-flower2 img {
+    width: 100%;
+    max-width: 16rem;
+    height: auto;    
 }
 
 .opening .opening-flower3 {
     position: absolute;
-    width: 100%;
-    height: auto;
-    display: block;
-    top: 3rem;
-    left: 16rem;
+    top: 0;
+    left: 73%;
     z-index: 5;
+    opacity: .9;
 }
 
-.opening .opening-flower4 img {
-    width: 50rem;
-    height: 50rem;
-    opacity: .4;
+.opening .opening-flower3 img {
+    max-width: 12rem;
+    height: auto;
+    transform: rotateY(180deg);
 }
 
 .opening .opening-flower4 {
     position: absolute;
-    width: 100%;
-    height: auto;
-    top: 18rem;
-    left: -4rem;
+    top: 20%;
+    left: 0;
     z-index: -1;
+    opacity: .4;
 }
 
-.opening .opening-flower5 img {
-    width: 40rem;
-    height: 40rem;
-    opacity: .4;
+.opening .opening-flower4 img {
+    width: 100%;
+    max-width: 35rem;
+    height: auto;
 }
 
 .opening .opening-flower5 {
     position: absolute;
+    top: 40%;
+    right: -20%;
+    z-index: -2;
+    opacity: .4;
+}
+
+.opening .opening-flower5 img {
     width: 100%;
+    max-width: 40rem;
     height: auto;
-    top: 30rem;
-    left: 12rem;
-    z-index: -1;
 }
 
 /* acara css */
 .acara {
     position: relative;
-    min-height: 100vh;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
     background-image: url(assets/img/background-1.svg);
     background-size: cover;
     background-position: center;
@@ -563,98 +527,119 @@ section {
     z-index: 1;
 }
 
+.acara .acara-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    width: 100%;
+}
 
-.acara .title {
-    display: block;
+.acara .title h2,
+.lokasi .title h2,
+.rsvp .title h2,
+.gift .title h2,
+.doa .title h2 {
     font-size: 4rem;
-    margin-top: 10rem;
-    font-weight: 500;
-    letter-spacing: 1.2px;
+    padding-top: 8rem;
 }
 
-.isi-acara {
-  position: relative;  
-  z-index: 10;
-}
-
-.isi-acara::before {
-    content: '';
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    width: 1px;
-    background-color: var(--text-huruf-sambung);
-    left: 50%;
+.acara .card {
+    background: transparent;
+    border: none;
 }
 
 .acara .card-header {
-    font-size: 3rem;
-    letter-spacing: 1.2px;
+    font-size: 3.5rem;
+    background: transparent;
+    border: none;
 }
 
 .acara .card-body {
     display: flex;
     flex-direction: column;
-}
-
-.card-body span {
-    margin: .5rem auto;
-}
-
-.acara .card-body .date,
-.acara .card-body .clock,
-.acara .card-body i {
     color: var(--text-color);
-    font-size: 1.3rem;
+    margin-top: -1.5rem;
+}
+
+.acara .card-body a {
+    background-color: var(--background-button);
+    color: var(--text-huruf-sambung);
+    margin-top: 1rem;
 }
 
 .acara .card-footer {
-    color: var(--text-color);
-    font-size: 1.1rem;
-    margin: 1rem auto;
-    z-index: 1;
-}
-
-.card-footer .btn-calendar {
-    background: var(--background-button);
-    color: var(--text-huruf-sambung);
-    font-size: 1rem;
+    background: transparent;
     border: none;
-    cursor: pointer;
-    transition: 1s;
-}
-
-.card-footer .btn-calendar:hover {
-    background: var(--text-huruf-sambung);
-    color: var(--white);
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-top: -1rem;
 }
 
 .acara .acara-footer {
-    margin-top: 1.5rem;
     color: var(--text-color);
     font-size: 1.2rem;
+    padding-top: 2rem;
 }
 
-.acara .logo {
+.acara .logo,
+.lokasi .logo,
+.gift .logo,
+.doa .logo, 
+.penutup .logo {
     position: absolute;
-    width: 100%;
-    height: auto;
+    display: block;
     justify-content: center;
     align-items: center;
-    display: block;
-    margin-top: 0rem;
-    z-index: 2;
+    top: 10%; 
+    z-index: 1;
 }
 
+.acara .quote-flower1,
+.lokasi .lokasi-flower1,
+.gift .gift-flower1,
+.doa .doa-flower1 {
+    position: absolute;
+    left: -20%;
+    top: -20%;
+    z-index: -1;
+}
+
+.acara .quote-flower2,
+.lokasi .lokasi-flower2,
+.gift .gift-flower2,
+.doa .doa-flower2 {
+    position: absolute;
+    left: -20%;
+    top: 72%; 
+    z-index: -1;
+}
+
+.acara .quote-flower3,
+.lokasi .lokasi-flower3,
+.gift .gift-flower3,
+.doa .doa-flower3 {
+    position: absolute;
+    right: -27%;
+    top: 53%; 
+    z-index: -1;
+}
+
+.acara .quote-flower4,
+.lokasi .lokasi-flower4,
+.gift .gift-flower4,
+.doa .doa-flower4 {
+    position: absolute;
+    left: 70%;
+    top: 12%;
+    z-index: -1;
+}
 
 /* lokasi css */
 .lokasi {
     position: relative;
-    min-height: 100vh;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
     background-image: url(assets/img/background-2.svg);
     background-size: cover;
     background-position: center;
@@ -662,16 +647,15 @@ section {
     z-index: 1;
 }
 
-.lokasi .title,
-.gift .title,
-.doa .title {
-    display: block;
-    font-size: 4rem;
-    margin-top: 11rem;
-    font-weight: 500;
-    letter-spacing: 1.5px;
+.lokasi .lokasi-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    width: 100%;
 }
-
 
 .lokasi iframe {
     border: solid 1px var(--text-color);
@@ -681,13 +665,13 @@ section {
 
 .lokasi h3 {
     color: var(--text-huruf-sambung);
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     margin-top: 2rem;
 }
 
 .lokasi p {
     color: var(--text-color);
-    font-size: 1.1rem;
+    font-size: 1.5rem;
 }
 
 .lokasi a {
@@ -704,61 +688,50 @@ section {
     color: var(--white);
 }
 
-.lokasi .logo,
-.gift .logo,
-.doa .logo {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    display: block;
-    margin-top: 2rem;
-    z-index: 1;
-}
-
 /* rsvp css */
 .rsvp {
     position: relative;
-    min-height: 100vh;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
     background: transparent;
     overflow: hidden;
+    z-index: 1;
 }
 
-.rsvp .title {
-    padding-top: 9rem;
-    font-size: 4rem;
-    font-weight: 500;
-    letter-spacing: 10px;
-    margin: 2rem auto;
+.rsvp .rsvp-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    width: 100%;
+}
+
+.rsvp .title h2 {
+    padding-top: 10rem;
+    letter-spacing: 15px;
 }
 
 .rsvp h4 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: var(--text-color);
 }
 
 .rsvp-container {
     position: relative;
     width: 100%;
-    max-width: 500px;
     margin: 1rem 0 1rem 0;
     padding: 1rem;
 }
 
 .rsvp-container .form-label {
     color: var(--text-color);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 .rsvp-container .form-control,
 .rsvp-container option {
     color: var(--text-color);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 .rsvp-container button {
@@ -782,7 +755,7 @@ section {
     padding: 0;
     border-radius: 10px;
     width: 40rem;
-    height: 17rem;
+    height: 100%;
     overflow-y: scroll;
     background-color: rgba(228, 224, 211, .8);
     z-index: 2;
@@ -809,42 +782,49 @@ section {
 }
 
 .rsvp .opening-bottom2 img {
-    width: 100rem;
-    height: 27rem;
+    width: 60rem;
+    height: auto;
     transform: rotateX(180deg);
     transform: rotateZ(180deg);
 }
 
 .rsvp .opening-bottom2 {
     position: absolute;
-    width: 100%;
-    height: auto;
     display: block;
-    top: -6.3rem;
-    right: 25rem;
+    top: -5%;
+    right: 0;
     z-index: 1;
+}
+
+.rsvp .opening-bottom {
+    top: 90%;
 }
 
 /* gift css */
 .gift {
     position: relative;
-    min-height: 100vh;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    background-image: url(assets/img/background-2.svg);
+    background-image: url(assets/img/background-1.svg);
     background-size: cover;
     background-position: center;
     overflow: hidden;
     z-index: 1;
 }
 
+.gift .gift-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    width: 100%;
+}
+
 .gift p {
     display: inline-flex;
     flex-direction: column;
     color: var(--text-color);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     width: 100%;
     margin: 2rem auto;
 }
@@ -853,15 +833,11 @@ section {
     z-index: 100;
 }
 
-.gift .logo {
-    margin-top: 0;
-}
-
 .btn-box {
     display: block;
-    width: 50%; 
-    max-width: 30rem; 
+    width: 20rem;
     margin: 1.5rem auto;
+    font-size: 1.5rem;
     background: var(--background-button);
     color: var(--text-huruf-sambung);
     box-shadow: var(--shadow);
@@ -975,24 +951,26 @@ section {
 /* doa css */
 .doa {
     position: relative;
-    min-height: 100vh;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    background-image: url(assets/img/background-1.svg);
+    background-image: url(assets/img/background-2.svg);
     background-size: cover;
     background-position: center;
     overflow: hidden;
     z-index: 1;
 }
 
-.doa .title {
-    padding-top: 5rem;
+.doa .doa-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    width: 100%;
 }
+
 .doa .arab {
     color: var(--text-color);
-    font-size: 2.3rem;
+    font-size: 2rem;
 }
 
 .doa .col-10 {
@@ -1003,7 +981,7 @@ section {
     display: inline-flex;
     flex-direction: column;
     color: var(--text-color);
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin: 2rem auto;
 }
 
@@ -1012,29 +990,29 @@ section {
 }
 
 .doa h3 {
-    /* margin-top: 2.5rem; */
     color: var(--text-huruf-sambung);
-    font-size: 1.5rem;
-}
-
-.doa .logo {
-    margin-top: 3.5rem;
+    font-size: 1.8rem;
 }
 
 
 /* penutup section */
 .penutup {
     position: relative;
-    min-height: 100vh;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    background-image: url(assets/img/background-2.svg);
+    background-image: url(assets/img/background-1.svg);
     background-size: cover;
     background-position: center;
     overflow: hidden;
     z-index: 1;
+}
+
+.penutup .penutup-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    width: 100%;
 }
 
 .penutup h4 {
@@ -1044,21 +1022,25 @@ section {
 }
 
 .penutup h4:nth-child(1) {
-    margin-top: 11rem;
+    padding-top: 12rem;
 }
 
 .penutup h4:nth-child(3) {
     margin: 2rem auto;
 }
 
+#nama-penutup {
+    display: block;
+}
 
-.penutup h3 {
+#nama-penutup h3 {
     color: var(--text-color);
     font-size: 1.5rem;
 }
 
-.penutup h2 {
+#nama-penutup h2 {
     font-size: 4.5rem;
+    margin-bottom: 3rem;
 }
 
 .penutup .keluarga {
@@ -1071,34 +1053,27 @@ section {
 .penutup h5 {
     color: var(--text-color);
     font-weight: 500;
-    font-size: 1.4rem;
-    margin-top: 5.5px;
+    font-size: 1.5rem;
+    margin-top: 1rem;
 }
 
 .penutup .closed-flower img {
-    width: 40rem;
-    height: 50rem;
+    width: 100%;
+    max-width: 36rem;
+    height: auto;
     opacity: .3;
 }
 
 .penutup .closed-flower {
     position: absolute;
-    width: 100%;
-    height: auto;
-    right: .28rem;
-    top: 13.8rem;
+    right: 10%;
+    top: 23.5%;
 }
 
-.penutup .logo {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    display: block;
-    margin-top: 0;
-    z-index: 1;
+.penutup .opening-bottom {
+    top: 92%;
 }
+
 
 
 
@@ -1133,14 +1108,6 @@ section {
     }
 }
 
-@media (max-width: 1200px){
-    
-
-}
-
-@media (max-width: 992px) {
-    
-}
 
 @media (max-width: 768px) {
     html {
@@ -1163,315 +1130,382 @@ section {
         font-size: 55%;
     }
 
-    .content-wrapper {
-        padding-top: 4rem;
+    .navbar {
+        height: 9rem;
     }
 
-    
+    .navbar .navbar-brand {
+        font-size: 6rem;
+        font-weight: 500;
+    }
+
+    .navbar .navbar-toggler-icon {
+        font-size: 2.5rem;
+    }
+
+    .navbar .offcanvas-title {
+        font-size: 4.5rem;
+    }
+
+    .navbar .nav-link {
+        font-size: 2.5rem;
+    }
+
     .hero {
         padding-top: 2rem;
         padding-bottom: 2rem;
     }
 
     .hero .flower1 {
-        right: 21.5rem;
-        top: 4rem;
+        right: 50%;
+        top: -30%;
     }
-    
-    .hero .flower1 img {
-        width: 25rem;
-        height: 35rem;
-    }
-    
+      
     .hero .flower2 {
-        right: 8rem;
-        top: 41rem;
+        right: 0;
+        top: 70%;
     }
-    
-    .hero .flower2 img {
-        width: 35rem;
-        height: 38rem;
-    }
-    
+     
     .hero .flower3 {
-        left: 6.8rem;
-        top: 19.4rem;
-    }
-    
-    .hero .flower3 img {
-        width: 20rem;
-        height: 40rem;
+        right: -7%;
+        top: 43%;
     }
     
     .hero .dekorasi {
-        top: 33.8rem;
-        right: 13rem;
-        
+        top: 40%;
+        right: 53%;
     }
     
     .hero .dekorasi2 {
-        top: 33.8rem;
-        right: .4rem;
+        top: 40%;
+        right: 27%;
     }
 
+    .cover h4 {
+        font-size: 2rem;
+    }
+     
+    .cover h1 {
+        font-size: 8rem;
+        line-height: 10rem;
+    }
     .cover a {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     
-
-    .quote,
-    .pembukaan,
-    .acara,
-    .lokasi,
-    .rsvp,
-    .gift,
-    .doa,
-    .penutup {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-    }
-
     .quote p {
-        margin-top: 29rem;
+        padding-top: 36rem;
+        font-size: 2rem;
     }
     
     .quote h4 {
         font-size: 2rem;
     }
 
-    .quote .logo {
-        margin-top: 17rem;
+    .quote .logo,
+    .opening .logo,
+    .acara .logo,
+    .lokasi .logo,
+    .gift .logo,
+    .doa .logo,
+    .penutup .logo {
+        top: 30%;
     }
-     
+
     .quote .logo img,
     .opening .logo img,
-    .acara .logo img {
-        width: 8rem;
-        height: 8rem;
+    .acara .logo img,
+    .lokasi .logo img,
+    .gift .logo img,
+    .doa .logo img,
+    .penutup .logo img {
+        width: 10rem;
+        height: auto;
     }
-    
-    .quote .quote-flower1,
-    .acara .acara-flower1,
-    .lokasi .lokasi-flower1,
-    .gift .gift-flower1,
-    .doa .doa-flower1 {
-        right: 15rem;
-        top: -1rem;
+
+    .quote .quote-flower1 {
+        right: 0;
+        top: 5%;
     }
      
-    .quote .quote-flower2,
-    .acara .acara-flower2,
-    .lokasi .lokasi-flower2,
-    .gift .gift-flower2,
-    .doa .doa-flower2 {
-        top: 56rem;
-        right: 20.5rem;
+    .quote .quote-flower2 {
+        top: 95%;
+        right: 0;
     }
-    
-    .quote .quote-flower2 img,
-    .acara .acara-flower2 img,
-    .lokasi .lokasi-flower2 img,
-    .gift .gift-flower2 img,
-    .doa .doa-flower2 img {
-        width: 28rem;
-        height: 28rem;
+        
+    .quote .quote-flower3 {
+        left: 45%;
+        top: 76%;
     }
-    
-    .quote .quote-flower3,
-    .acara .acara-flower3,
-    .lokasi .lokasi-flower3,
-    .gift .gift-flower3,
-    .doa .doa-flower3 {
-        left: 17rem;
-        top: 40.5rem;
-    }
-    
-    .quote .quote-flower3 img,
-    .acara .acara-flower3 img,
-    .lokasi .lokasi-flower3 img,
-    .gift .gift-flower3 img,
-    .doa .doa-flower3 img{
-        width: 40rem;
-        height: 42rem;
-    }
-    
-    .quote .footer-section,
-    .opening .footer-section,
-    .acara .footer-section,
-    .lokasi .footer-section,
-    .gift .footer-section,
-    .doa .footer-section {
-        top: 58rem;
+     
+    .quote .quote-flower4 {
+        left: 70%;
+        top: 25%;  
     }
 
-    .quote .footer-section img,
-    .opening .footer-section img,
-    .acara .footer-section img,
-    .lokasi .footer-section img,
-    .gift .footer-section img,
-    .doa .footer-section img {
-        width: 25rem;
-        height: 10rem;
+    .opening .logo,
+    .acara .logo,
+    .lokasi .logo,
+    .gift .logo,
+    .doa .logo,
+    .penutup .logo {
+        top: 5%;
     }
 
-    .quote .quote-flower4,
-    .acara .acara-flower4,
-    .lokasi .lokasi-flower4,
-    .gift .gift-flower4,
-    .doa .doa-flower4 {
-        left: 15rem;
-        top: 9rem;  
+    .opening h3 {
+        font-size: 4rem;
+        padding-top: 3rem;
+        margin-bottom: 3rem;
     }
 
-    .opening .opening-bottom,
-    .rsvp .opening-bottom,
-    .penutup .opening-bottom {
-        top: 56rem;
+    .opening h4 {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .opening p {
+        font-size: 1.7rem;
+        margin-bottom: 4rem;
+    }
+
+    .opening h1 {
+        font-size: 4.3rem;
+    }
+
+    .opening h5 {
+        font-size: 4rem;
+    }
+
+    .opening .opening-bottom {
+        top: 110%;
+    }
+
+    .opening .opening-flower2 img {
+        max-width: 18rem;
+    }
+
+    .opening .opening-flower2 {
+        top: -15%;
+        left: -2%;
+    }
+
+    .opening .opening-flower3 img {
+        max-width: 14rem;
+    }
+
+    .opening .opening-flower3 {
+        top: 0;
+        right: -5%;
+    }
+
+    .opening .opening-flower4 {
+        top: 55%;
+    }
+
+    .opening .opening-flower5 {
+        top: 68%;
     }
 
     .acara .card-header {
         font-size: 3.5rem;
     }
 
-    .lokasi .logo {
-        margin-top: 2rem;
+    .acara .quote-flower2,
+    .lokasi .lokasi-flower2,
+    .gift .gift-flower2,
+    .doa .doa-flower2 {
+        top: 85%;
+        left: -19%;
     }
 
-    .lokasi .title {
-        font-size: 4rem;
+    .acara .quote-flower3,
+    .lokasi .lokasi-flower3,
+    .gift .gift-flower3,
+    .doa .doa-flower3 {
+        top: 62%;
+    }
+
+    .acara .quote-flower4,
+    .lokasi .lokasi-flower4,
+    .gift .gift-flower4,
+    .doa .doa-flower4 {
+        top: 0;
+    }
+
+    .acara .title h2,
+    .lokasi .title h2,
+    .rsvp .title h2,
+    .gift .title h2,
+    .doa .title h2 {
+        font-size: 6rem;
+        padding-top: 10rem;
+        letter-spacing: 1.5px;
+    }
+
+    .acara .card-header {
+        font-size: 4.5rem;
+    }
+
+    #akad {
+        margin-top: -2rem;
+    }
+
+    .acara .card-body {
+        font-size: 1.5rem;
+    }
+
+    .acara .card-body a {
+        font-size: 1.5rem;
+    }
+
+    .acara .card-footer {
+        font-size: 1.5rem;
+    }
+
+    .acara .acara-footer {
+        font-size: 1.5rem;
     }
 
     .lokasi iframe {
-        height: 15rem;
+        height: 20rem;
     }
 
     .lokasi h3 {
+        font-size: 2.5rem;
         margin: 0 auto;
     }
 
     .lokasi p {
-        font-size: 1.3rem;
+        margin-top: 2rem;
+        font-size: 1.7rem;
+    }
+
+    .lokasi a {
+        font-size: 1.5rem;
+    }
+
+    .rsvp .opening-bottom {
+        top: 105%;
     }
 
     .rsvp .opening-bottom2 {
-        top: -6rem;
+        top: -20%;
     }
 
-    .rsvp .title {
-        font-size: 4.5rem;
-        margin-top: 5rem;
+    .rsvp .title h2 {
+        letter-spacing: 15px;
+        padding-top: 5rem;
+        margin-bottom: 3rem;
     }
 
     .rsvp h4 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .rsvp .form-label {
-        font-size: 1.3rem;
+        font-size: 1.8rem;
     }
 
     .rsvp .form-control,
     .rsvp .form-select {
-        font-size: 1.3rem;
+        font-size: 2rem;
     }
 
     .rsvp button {
-        width: 10rem;
-        font-size: 1.3rem;
+        width: 15rem;
+        font-size: 2rem;
     }
 
     #rsvp-display {
+        margin-top: 2rem;
         width: 40rem;
-        height: 22rem;
+        height: rem;
     }
 
     #rsvp-list li {
         width: 34rem;
-        font-size: 1.2rem;
+        font-size: 2rem;
     }
 
-    .penutup h4 {
-        font-size: 1.3rem;
-    }
-
-    #nama-penutup h3 {
+    .gift p {
         font-size: 1.5rem;
     }
 
-    #nama-penutup h2 {
-        font-size: 4.5rem;
+    .doa .arab {
+        font-size: 4rem;
     }
 
-    .penutup .closed-flower {
-        top: 18.4rem;
-        
+    .doa p {
+        font-size: 1.7rem;
     }
+
+    .doa h3 {
+        font-size: 1.7rem;
+    }
+
+    .penutup h4 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    #nama-penutup h3 {
+        font-size: 2rem;
+    }
+
+    #nama-penutup h2 {
+        font-size: 5rem;
+    }
+
+    #nama-orangtua .keluarga {
+        font-size: 1.5rem;
+    }
+    #nama-orangtua h5 {
+        font-size: 2rem;
+    }
+
+    /* .penutup .closed-flower {
+        top: 0;   
+    }
+
+    .penutup .closed-flower img {
+        width: 100rem;
+        height: 100rem;
+    } */
 
 }
 
-@media (max-width: 371px) {
+@media (max-width: 377px) {
     html {
         font-size: 45%;
     }
 
-    .content-wrapper {
-        padding-top: 5rem;
-    }
-
-    .hero,
-    .quote,
-    .pembukaan,
-    .lokasi,
-    .rsvp,
-    .gift,
-    .doa,
-    .penutup {
-        display: flex;
-        flex-direction: column;
-    }
-
     .hero .flower1 {
-        right: 25rem;
-        top: 7rem;
-    }
-    
-    .hero .flower1 img {
-        width: 28rem;
-        height: 40rem;
+        right: 50%;
+        top: -37%;
     }
     
     .hero .flower2 {
-        right: 6rem;
-        top: 51rem;
-    }
-    
-    .hero .flower2 img {
-        width: 33rem;
-        height: 45rem;
+        right: 0;
+        top: 70%;
     }
     
     .hero .flower3 {
-        left: 7.8rem;
-        top: 32.3rem;
-    }
-    
-    .hero .flower3 img {
-        width: 21rem;
-        height: 37rem;
+        left: 70%;
+        top: 40%;
     }
     
     .hero .dekorasi {
-        top: 42rem;
-        right: 13.5rem;  
+        top: 38%;
+        right: 55%;  
     }
     
     .hero .dekorasi2 {
-        top: 42rem;
-        left: 0rem;
+        top: 38%;
+        left: 55%;
     }
 
     .cover h4 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .cover h1 {
@@ -1489,146 +1523,147 @@ section {
     }
 
     .quote .col-8 {
-        margin-top: -18rem;
+        margin-top: 0;
     }
+
     .quote p {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
     
     .quote h4 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
     
     .quote .logo {
-        margin-top: 0;
+        top: 30%;
     }
     
-    .quote .quote-flower1,
-    .acara .acara-flower1,
-    .lokasi .lokasi-flower1,
-    .gift .gift-flower1,
-    .doa .doa-flower1 {
-        right: 16rem;
-        top: 6rem; 
+    .quote .quote-flower1 {
+        right: 0;
+        top: 5%; 
     }
      
-    .quote .quote-flower2,
-    .acara .acara-flower2,
-    .lokasi .lokasi-flower2,
-    .gift .gift-flower2,
-    .doa .doa-flower2 {
-        top: 66.5rem;
-        right: 23rem;
+    .quote .quote-flower2 {
+        top: 87%;
+        left: -18%;
     }
     
-    .quote .quote-flower3,
-    .acara .acara-flower3,
-    .lokasi .lokasi-flower3,
-    .gift .gift-flower3,
-    .doa .doa-flower3 {
-        left: 16.5rem;
-        top: 54rem;
+    .quote .quote-flower3 {
+        left: 42%;
+        top: 70%;
     }
     
-    .quote .quote-flower4,
-    .acara .acara-flower4,
-    .lokasi .lokasi-flower4,
-    .gift .gift-flower4,
-    .doa .doa-flower4 {
-        left: 17rem;
-        top: 15rem;
+    .quote .quote-flower4 {
+        left: 70%;
+        top: 18%;
     }
     
-    .quote .footer-section,
-    .opening .footer-section,
-    .acara .footer-section,
-    .lokasi .footer-section,
-    .gift .footer-section,
-    .doa .footer-section {
-        top: 68rem;
-    }
-
     .opening .opening-bottom {
-        top: 65rem;
+        top: 110%;
     }
 
     .opening h3 {
-        font-size: 3.5rem;
-    }
-
-    .opening h4 {
-        font-size: 1.8rem;
-    }
-
-    .opening p {
-        font-size: 1.3rem;
-    }
-
-    .opening h1 {
-        font-size: 4.3rem;
-    }
-
-    .acara .logo {
-        margin-top: 0rem;
-    }
-
-    .acara .title {
-        font-size: 6rem;
-    }
-
-    .isi-acara .card-header {
         font-size: 4rem;
     }
 
-   .isi-acara .card-footer {
-    font-size: 1.4rem;
-   }
+    .opening h4 {
+        font-size: 2rem;
+    }
+
+    .opening p {
+        font-size: 1.6rem;
+    }
+
+    .opening h1 {
+        font-size: 4.4rem;
+    }
+
+    .opening .logo {
+        top: 5%;
+    }
+
+    .acara .quote-flower1,
+    .lokasi .lokasi-flower1,
+    .gift .gift-flower1,
+    .doa .doa-flower1 {
+        top: -6%;
+    }
+
+    .acara .quote-flower2,
+    .lokasi .lokasi-flower2,
+    .gift .gift-flower2,
+    .doa .doa-flower2 {
+        top: 75.5%;
+        left: -18%;
+    }
+    
+    .acara .quote-flower3,
+    .lokasi .lokasi-flower3,
+    .gift .gift-flower3,
+    .doa .doa-flower3 {
+        right: -22%;
+        top: 59%;
+    }
+
+    .acara .quote-flower4,
+    .lokasi .lokasi-flower4,
+    .gift .gift-flower4,
+    .doa .doa-flower4 {
+        top: 10%;
+    }
+
+    .acara .logo,
+    .lokasi .logo,
+    .gift .logo,
+    .doa .logo,
+    .penutup .logo {
+        top: 15%;
+    }
+
+    .acara .title h2,
+    .lokasi .title h2,
+    .rsvp .title h2,
+    .gift .title h2,
+    .doa .title h2 {
+        font-size: 5.5rem;
+        padding-top: 7rem;
+    }
+
+    .acara .card-header {
+        font-size: 4rem;
+    }
+
+    .acara .card-body {
+        font-size: 1.7rem;
+    }
 
    .acara .acara-footer {
     font-size: 1.5rem;
    }
 
-    .lokasi .logo {
-        margin-top: 0;
-    }
-
     .lokasi iframe {
-        max-width: 30rem;
+        max-width: 35rem;
         max-height: 15rem;
     }
 
     .lokasi h3 {
-        font-size: 1.7rem;
+        font-size: 2.6rem;
     }
 
     .lokasi p {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
     }
 
     .lokasi a {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
-    .lokasi .logo,
-    .doa .logo {
-        margin-top: 0;
-    }
-
-    .lokasi .logo img,
-    .gift .logo img,
-    .doa .logo img,
-    .penutup .logo img {
-        width: 7rem;
-        height: 7rem;
-    }
-
-    .rsvp .title {
-        padding-top: 19rem;
-        font-size: 5rem;
+    .rsvp .title h2 {
+        padding-top: 10rem;
     }
     
     .rsvp h4 {
-        font-size: 1.9rem;
+        font-size: 2rem;
         letter-spacing: 2px;
     }
     
@@ -1638,17 +1673,16 @@ section {
     }
     
     .rsvp-container .form-label {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     
-    .rsvp-container .form-control,
-    .rsvp-container option {
-        font-size: 1.5rem;
+    .rsvp-container .form-control {
+        font-size: 2rem;
     }
     
     .rsvp-container button { 
-        width: 10rem;
-        font-size: 1.5rem;
+        width: 20rem;
+        font-size: 2.5rem;
     }
     
     #rsvp-display {
@@ -1662,16 +1696,16 @@ section {
     
     #rsvp-list li {
         width: 35rem;
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     
     .rsvp .opening-bottom2 {
-        top: 0;
+        top: -5%;
     }
 
     .rsvp .opening-bottom,
     .penutup .opening-bottom {
-        top: 73rem;
+        top: 95%;
     }
 
     .gift p {
@@ -1679,16 +1713,8 @@ section {
         font-size: 1.5rem;
     }
 
-    .doa .logo {
-        margin-top: 0;
-    }
-
-    .doa .title {
-        margin-top: 4rem;
-    }
-
     .doa .arab {
-        font-size: 2.5rem;
+        font-size: 4rem;
     }
 
     .doa p {
@@ -1696,20 +1722,16 @@ section {
     }
 
     .doa h3 {
-        margin-top: -1rem;
         font-size: 2rem;
     }
 
-    .penutup h4 {
-        font-size: 1.4rem;
+    .penutup .col-10 h4 {
+        font-size: 2rem;
     }
 
     #nama-penutup h2 {
         font-size: 5rem;
-    }
-
-    .penutup .logo {
-        margin-top: 0;
+        margin-bottom: 1rem;
     }
 
     .penutup .keluarga {
@@ -1721,11 +1743,15 @@ section {
     }
 
     #nama-orangtua {
-        margin: 1rem auto;
+        margin: 1.2rem auto;
     }
 
-    .penutup .closed-flower {
-        top: 27rem;
+    .penutup .opening-bottom {
+        top: 82%;
     }
+
+    /* .penutup .closed-flower {
+        top: 27rem;
+    } */
 
 }
