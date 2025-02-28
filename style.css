@@ -108,6 +108,7 @@ section {
     right: 41%;
     z-index: -1;
     opacity: .9;
+    /* animation: myFlower linear 10s infinite; */
 }
   
 .hero .flower1 img {
@@ -122,7 +123,8 @@ section {
     right: 0;
     z-index: -1;
     opacity: .9;
-    animation: myFlower linear 10s infinite;
+    transform-origin: bottom center;
+    animation: myFlower ease 10s infinite forwards;
 }
   
 .hero .flower2 img {
@@ -136,7 +138,8 @@ section {
     right: -5%;
     top: 22%;
     z-index: -2;
-    animation: myFlower linear 10s infinite;
+    transform-origin: bottom center;
+    animation: myFlower2 linear 10s infinite forwards;
     opacity: .9;
 }
 
@@ -227,6 +230,7 @@ section {
     transition: .3s;
     width: 100%;
     max-width: 451px;
+    backdrop-filter: blur(4px);
 }
 
 .mynavbar .navbar-brand,
@@ -297,8 +301,7 @@ section {
     justify-content: center;
     align-items: center;
     top: 20%;
-    z-index: 1;
-    border: solid 1px red
+    z-index: 5;
 }
 
 .quote .logo img,
@@ -318,7 +321,6 @@ section {
     left: -20%;
     top: -12%;
     z-index: -1;
-    border: solid 1px yellowgreen
 }
 
 .quote .quote-flower1 img,
@@ -336,7 +338,6 @@ section {
     left: -20%;
     top: 80%;
     z-index: -1;
-    border: solid 1px yellowgreen
 }
 
 .quote .quote-flower2 img,
@@ -354,7 +355,6 @@ section {
     right: -27%;
     top: 60%;
     z-index: -1;
-    border: solid 1px yellowgreen
 }
 
 .quote .quote-flower3 img,
@@ -372,7 +372,6 @@ section {
     left: 70%;
     top: 20%;
     z-index: -1;
-    border: solid 1px yellowgreen
 }
 
 .quote .quote-flower4 img,
@@ -390,9 +389,7 @@ section {
 .opening {
     position: relative;
     min-height: 100vh;
-    background-image: url(assets/img/background-2.svg);
-    background-size: cover;
-    background-position: center;
+    background: transparent;
     overflow: hidden;
     z-index: -4;
 }
@@ -412,35 +409,46 @@ section {
     z-index: 100;
 }
 
-.opening h3 {
+.opening h3.start-animation {
     font-size: 2.7rem;
-    color: var(--text-color);  
+    color: var(--text-color);
+    animation: turunMuncul 3s ease-in 1 forwards paused;
 }
 
-.opening h4 {
+.opening h4.start-animation {
     color: var(--text-color);
     font-size: 1.5rem;
     text-align: center;
     font-weight: 700;
     margin: 1rem auto;
+    animation: turunMuncul 3s ease-in 1 forwards paused;
 }
 
-.opening p {
+.opening p.start-animation {
     font-size: 1.5rem;
     color: var(--text-color);
     font-weight: 500;
+    animation: turunMuncul 3s ease-in 1 forwards paused;
+    animation-fill-mode: forwards;
 }
 
-.opening h1 {
+.opening h1.start-animation {
     font-size: 3.9rem;
+    animation-delay: 4s;
+    animation: turunMuncul 3s ease-in 1 forwards paused;
+    animation-fill-mode: forwards;
 }
 
-.opening h5 {
+.opening h5.start-animation {
     font-size: 3.2rem;
+    animation-delay: 4s;
+    animation: turunMuncul 3s ease-in 1 forwards paused;
+    animation-fill-mode: forwards;
 }
 
-.opening .logo {
+.opening .logo.start-animation {
     top: 0;
+    animation: turunMuncul 3s ease-out 1 forwards paused; 
 }
 
 .opening .opening-bottom,
@@ -450,7 +458,7 @@ section {
     top: 106%;
     right: 0;
     opacity: .9;
-    z-index: 1;
+    z-index: 5;
 }
 
 .opening .opening-bottom img,
@@ -461,12 +469,12 @@ section {
     height: auto; 
 }
 
-.opening .opening-flower2 {
+.opening .opening-flower2.start-animation {
     position: absolute;
     top: -15%;
     left: -1%;
     z-index: 5;
-    opacity: .9;
+    animation: turunMuncul 4s ease-out 1 forwards paused;
 }
 
 .opening .opening-flower2 img {
@@ -480,21 +488,24 @@ section {
     top: 0;
     left: 73%;
     z-index: 5;
-    opacity: .9;
+    transition: .3s;
+    animation: turunMuncul 4s ease-out 1 forwards paused; 
 }
 
-.opening .opening-flower3 img {
+.opening .opening-flower3.start-animation img {
     max-width: 12rem;
     height: auto;
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); 
 }
 
-.opening .opening-flower4 {
+.opening .opening-flower4.start-animation {
     position: absolute;
-    top: 20%;
+    top: 40%;
     left: 0;
     z-index: -1;
-    opacity: .4;
+    transition: .3s;
+    transform-origin: bottom center;
+    animation: myFlower2 linear 15s infinite, disappear linear 5s infinite paused;
 }
 
 .opening .opening-flower4 img {
@@ -503,12 +514,13 @@ section {
     height: auto;
 }
 
-.opening .opening-flower5 {
+.opening .opening-flower5.start-animation {
     position: absolute;
     top: 40%;
     right: -20%;
     z-index: -2;
-    opacity: .4;
+    transform-origin: bottom center;
+    animation: myFlower2 ease-in 10s infinite, disappear linear 4s infinite paused;
 }
 
 .opening .opening-flower5 img {
@@ -516,6 +528,22 @@ section {
     max-width: 40rem;
     height: auto;
 }
+
+.opening .gerbang {
+    position: absolute;
+    z-index: 2;
+    transform-origin: center;
+    animation: gateOpen ease-in-out 3s 1 paused;
+    animation-delay: 1s;
+    transition: .3s;
+}
+
+.opening .gerbang img {
+    width: 100%;
+    max-width: 52rem;
+    height: auto;
+}
+
 
 /* acara css */
 .acara {
@@ -1074,7 +1102,40 @@ section {
     top: 92%;
 }
 
+.start-animation {
+    animation-play-state: paused !important;
+}
 
+.start-animation.animate {
+    animation-play-state: running !important;
+}
+
+footer {
+    padding: 2rem;
+    background-color: var(--text-huruf-sambung);
+    color: var(--white);
+}
+
+footer small {
+    font-size: 1.2rem;
+}
+
+footer a {
+    color: var(--white);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+footer a:hover {
+    color: white;
+}
+
+footer li {
+    list-style: none;
+    display: inline;
+    margin: 0.5rem;
+}
 
 
 
@@ -1085,7 +1146,7 @@ section {
     font-size: 2.5rem;
     position: fixed;
     bottom: 2.5rem;
-    right: 230px;
+    right: 2rem;
     z-index: 10;
     cursor: pointer;
     color: var(--text-huruf-sambung);
@@ -1105,6 +1166,78 @@ section {
 
     to {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes myFlower {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes myFlower2 {
+    0%, 50%, 100% {
+        transform: rotateZ(0deg);
+    }
+
+    25% {
+        transform: rotateZ(-15deg);
+    }
+
+    75% {
+        transform: rotateZ(15deg);
+    }
+}
+
+@keyframes disappear {
+    0%, 100% {
+        opacity: .4;
+    }
+
+    20% {
+        opacity: .6;
+    }
+
+    40% {
+        opacity: .8;
+    }
+
+    60% {
+        opacity: .6;
+    }
+
+    80% {
+        opacity: .5;
+    }
+}
+
+@keyframes gateOpen {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      50% {
+        transform: scale(1.2);
+        opacity: 0.5;        
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+    }    
+}
+
+@keyframes turunMuncul {
+    0%, 70% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
     }
 }
 
@@ -1462,16 +1595,24 @@ section {
     #nama-orangtua h5 {
         font-size: 2rem;
     }
+}
 
-    /* .penutup .closed-flower {
-        top: 0;   
+@media (max-width: 391px) {
+    html {
+        font-size: 50%;
+    }
+    
+    .opening .opening-bottom {
+        top: 100%;
     }
 
-    .penutup .closed-flower img {
-        width: 100rem;
-        height: 100rem;
-    } */
-
+    .acara .logo,
+    .lokasi .logo,
+    .gift .logo,
+    .doa .logo,
+    .penutup .logo {
+        top: 10%;
+    }
 }
 
 @media (max-width: 377px) {
@@ -1559,7 +1700,7 @@ section {
     }
     
     .opening .opening-bottom {
-        top: 110%;
+        top: 100%;
     }
 
     .opening h3 {
@@ -1749,9 +1890,5 @@ section {
     .penutup .opening-bottom {
         top: 82%;
     }
-
-    /* .penutup .closed-flower {
-        top: 27rem;
-    } */
 
 }

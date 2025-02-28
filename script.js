@@ -81,6 +81,54 @@ const navLinks = document.querySelectorAll('.nav-link');
       });
     });
 
+// animation start
+
+document.addEventListener('DOMContentLoaded', function() {
+  const sections = document.querySelectorAll('section');
+  console.log('Jumlah section ditemukan:', sections.length);
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const sectionId = entry.target.id;
+      const animatedElements = entry.target.querySelectorAll('.start-animation');
+      console.log(`Section ${sectionId} terlihat:`, entry.isIntersecting);
+
+      if (entry.isIntersecting) {
+        animatedElements.forEach(el => {
+          // Ambil stile animasi saat ini
+          const computedStyle = window.getComputedStyle(el);
+          const iterationCount = computedStyle.animationIterationCount;
+
+          // Reset animasi
+          el.classList.remove('animate');
+          void el.offsetWidth; // Paksa reflow
+
+          // Khusus animasi sekali jalan (iteration-count: 1)
+          if (iterationCount === '1') {
+            const animationName = computedStyle.animationName;
+            const animationDuration = computedStyle.animationDuration;
+            const animationTiming = computedStyle.animationTimingFunction;
+            el.style.animation = 'none'; // Hapus animasi
+            void el.offsetWidth; // Reset
+            el.style.animation = `${animationName} ${animationDuration} ${animationTiming} 1`; // Tambah kembali
+          }
+
+          // Tambah class untuk jalankan animasi
+          el.classList.add('animate');
+          console.log(`Animasi dimulai untuk:`, el.className, `(iteration: ${iterationCount})`);
+        });
+      }
+    });
+  }, {
+    threshold: 0.1 // 10% section terlihat
+  });
+
+  sections.forEach(section => {
+    console.log('Mengamati:', section.id);
+    observer.observe(section);
+  });
+});
+
 
 // gift js
 $(document).ready(function() {
